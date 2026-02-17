@@ -27,9 +27,13 @@ git add .
 # Check for changes to commit
 $status = git status --porcelain
 if ([string]::IsNullOrWhiteSpace($status)) {
-    Write-Host "No changes to commit." -ForegroundColor Yellow
+    Write-Host "No changes to commit (No files changed)." -ForegroundColor Yellow
     exit 0
 }
+
+Write-Host "Files to be updated:" -ForegroundColor Green
+Write-Host $status
+
 
 # Commit
 Write-Host "Committing with message: '$Message'" -ForegroundColor Cyan
@@ -41,7 +45,8 @@ git push origin main
 
 if ($LASTEXITCODE -eq 0) {
     Write-Host "Successfully updated portfolio!" -ForegroundColor Green
-} else {
+}
+else {
     Write-Host "Error pushing changes." -ForegroundColor Red
 }
 
