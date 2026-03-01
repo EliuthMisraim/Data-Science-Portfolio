@@ -14,24 +14,6 @@ Este repositorio contiene mi portafolio de Ciencia de Datos, organizado por tema
 - **08-Power-BI**: Dashboards y reportes.
 - **09-Series-de-Tiempo**: Análisis temporal y forecasting.
 
-## Cómo Actualizar el Portafolio
+## NOTA:
 
 He incluido un script de automatización para facilitar la subida de nuevos archivos a GitHub.
-
-### Opción 1: Ejecución Rápida (Recomendada)
-Haz doble clic en el archivo **`run_update.bat`**.  
-Esto abrirá una ventana, sincronizará tus archivos y se cerrará automáticamente al terminar.
-
-### Opción 2: PowerShell
-1. Haz clic derecho en el archivo `update_portfolio.ps1`.
-2. Selecciona **"Ejecutar con PowerShell"**.
-
-### Opción 3: Línea de Comandos
-Abre una terminal en esta carpeta y ejecuta:
-```powershell
-.\update_portfolio.ps1
-```
-Puedes agregar un mensaje de commit personalizado:
-```powershell
-.\update_portfolio.ps1 "Agregué nuevo análisis de ventas"
-```
