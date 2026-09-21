@@ -1,0 +1,1001 @@
+employee_id,name,role,department,age,gender,tenure_months,monthly_salary,distance_km,overtime_hours_last_month,training_hours,last_performance_rating,has_quit
+EMP0001,Elena Vázquez Ramos,Almacén,Logística,52,Masculino,40,9332.18,25.9,55.1,9,2,1
+EMP0002,Carmen Jiménez Torres,Almacén,Logística,36,Masculino,17,12151.15,32.8,9.2,11,4,0
+EMP0003,Carlos Sánchez Torres,Almacén,Logística,36,Masculino,27,11183.33,16.6,17.7,11,3,0
+EMP0004,Jorge Torres Ramos,Almacén,Logística,49,Masculino,9,10562.46,10.4,44.3,17,4,1
+EMP0005,Silvia Vázquez González,Ventas Técnicas,Ventas,29,Masculino,2,26954.57,4.1,4.4,12,4,0
+EMP0006,Guadalupe Sánchez Salazar,Almacén,Logística,56,Masculino,45,12585.68,29.4,40.2,6,2,0
+EMP0007,Sofía Vargas Vargas,Ventas Técnicas,Ventas,39,Femenino,13,31111.34,10.3,13.7,12,3,0
+EMP0008,Eduardo Alvarez Ortiz,Almacén,Logística,37,Femenino,45,13034.36,87.9,14.4,7,3,0
+EMP0009,Monica Salazar Pérez,Almacén,Logística,36,Masculino,72,10198.38,8.9,15.5,12,4,0
+EMP0010,Elena Hernández Ruiz,Almacén,Logística,27,Masculino,8,10247.36,40.1,21.4,12,3,0
+EMP0011,Pedro Moreno López,Ventas Técnicas,Ventas,32,Masculino,86,33074.69,2.7,8.8,9,3,0
+EMP0012,Adriana Ramírez Castro,Almacén,Logística,24,Masculino,29,10888.33,15.3,25.4,9,3,0
+EMP0013,Ana González Rodríguez,Almacén,Logística,30,No binario,34,9837.0,32.1,51.0,12,4,0
+EMP0014,José Vargas Torres,Almacén,Logística,29,Masculino,2,8897.22,48.0,39.9,9,2,1
+EMP0015,Carmen Herrera Castro,Almacén,Logística,33,Femenino,83,10417.6,13.3,38.8,13,3,1
+EMP0016,Roberto Salazar Torres,Almacén,Logística,49,Masculino,70,9153.7,9.3,46.3,15,2,0
+EMP0017,Fernando Hernández Vázquez,Almacén,Logística,49,Masculino,28,11262.25,10.8,11.9,9,3,0
+EMP0018,Jorge Torres Ramos,Ventas Técnicas,Ventas,47,Femenino,33,35282.77,7.4,8.0,11,3,0
+EMP0019,Javier Ramírez Reyes,Almacén,Logística,36,Femenino,26,8890.39,21.6,12.9,11,4,0
+EMP0020,Rosa Jiménez Vázquez,Almacén,Logística,53,Masculino,100,11723.71,17.2,38.1,10,3,0
+EMP0021,Luis Castillo Rodríguez,Almacén,Logística,41,Femenino,26,11346.43,14.0,26.2,14,3,0
+EMP0022,Francisco Morales Herrera,Almacén,Logística,45,Femenino,61,9285.54,22.3,39.9,14,4,1
+EMP0023,Alejandro Castillo Ramírez,Almacén,Logística,32,Femenino,15,11247.53,13.6,74.6,13,1,1
+EMP0024,Juan González Sánchez,Almacén,Logística,33,Femenino,5,8199.1,45.2,27.2,6,3,0
+EMP0025,Guadalupe Castro Guzmán,Almacén,Logística,39,Masculino,39,11022.71,27.5,17.0,6,5,0
+EMP0026,Roberto Alvarez García,Almacén,Logística,41,Femenino,16,12278.65,18.4,21.1,14,3,0
+EMP0027,Ricardo Ortiz Castro,Almacén,Logística,42,Femenino,25,9009.75,50.7,48.0,7,1,1
+EMP0028,Sofía Alvarez Rodríguez,Almacén,Logística,41,Femenino,20,9938.5,21.8,14.2,11,3,0
+EMP0029,Ricardo Medina Martínez,Almacén,Logística,24,Femenino,15,11087.76,61.5,13.8,13,3,0
+EMP0030,Patricia Reyes Moreno,Almacén,Logística,38,Femenino,15,11693.16,15.7,68.8,17,2,0
+EMP0031,Fernando Salazar Ramírez,Almacén,Logística,22,Masculino,3,10270.35,24.5,17.8,14,4,0
+EMP0032,José Alvarez Morales,Almacén,Logística,45,Femenino,10,12274.4,29.0,16.5,11,4,0
+EMP0033,Eduardo Castro Jiménez,Almacén,Logística,51,Masculino,59,13329.29,17.3,48.8,17,1,1
+EMP0034,Luis Jiménez Gómez,Almacén,Logística,26,Femenino,12,11031.51,52.1,43.7,10,4,1
+EMP0035,Elena Flores Flores,Almacén,Logística,44,Femenino,3,9951.28,21.9,41.9,7,4,1
+EMP0036,Guadalupe Hernández Guzmán,Almacén,Logística,26,Femenino,3,10779.41,17.4,28.3,6,5,0
+EMP0037,José Flores Morales,Almacén,Logística,33,Masculino,51,10003.66,41.6,30.0,17,3,1
+EMP0038,Jorge Jiménez Torres,Almacén,Logística,35,Masculino,2,13213.03,40.1,38.0,11,4,1
+EMP0039,Guadalupe Díaz Castro,Ventas Técnicas,Ventas,53,Masculino,1,32348.26,23.1,7.7,12,3,0
+EMP0040,Ricardo Ruiz Rodríguez,Almacén,Logística,39,Masculino,27,9840.49,20.7,41.9,8,3,0
+EMP0041,Fernando González Flores,Ventas Técnicas,Ventas,26,Femenino,96,22436.47,16.5,2.6,14,3,0
+EMP0042,Sofía Flores Hernández,Ventas Técnicas,Ventas,47,Femenino,2,34459.6,12.7,5.3,8,3,0
+EMP0043,Ricardo Díaz Guzmán,Almacén,Logística,46,Femenino,55,8000.0,13.2,25.4,19,3,0
+EMP0044,Daniel Castro García,Ventas Técnicas,Ventas,27,Masculino,93,32234.9,5.0,11.1,10,3,0
+EMP0045,Guadalupe Guzmán Ruiz,Almacén,Logística,44,Masculino,23,11254.96,38.1,22.0,13,3,0
+EMP0046,Fernando Morales Rodríguez,Almacén,Logística,22,Masculino,13,12457.36,7.5,52.0,10,4,0
+EMP0047,Laura Reyes Gómez,Ventas Técnicas,Ventas,39,Masculino,60,31926.41,21.0,9.8,10,3,0
+EMP0048,Carmen Medina Jiménez,Ventas Técnicas,Ventas,27,Masculino,5,31836.53,6.2,10.7,12,2,0
+EMP0049,Eduardo Vázquez Medina,Almacén,Logística,24,Masculino,6,9776.75,16.2,23.8,10,3,0
+EMP0050,Carlos Pérez Ramírez,Ventas Técnicas,Ventas,45,Masculino,30,26823.79,21.6,3.7,9,3,0
+EMP0051,Rosa López Salazar,Almacén,Logística,33,Femenino,19,12277.1,12.5,99.3,11,3,0
+EMP0052,Miguel Vázquez Mendoza,Almacén,Logística,33,Masculino,1,12679.36,11.9,17.1,17,3,0
+EMP0053,Jorge Jiménez Hernández,Ventas Técnicas,Ventas,36,Femenino,3,43871.65,23.5,2.2,10,3,0
+EMP0054,Juan Moreno Castillo,Ventas Técnicas,Ventas,56,Masculino,28,31048.31,10.6,5.6,8,3,0
+EMP0055,Monica Sánchez Ramos,Almacén,Logística,49,Masculino,3,8000.0,30.8,22.1,16,3,1
+EMP0056,José Torres Ruiz,Almacén,Logística,40,Masculino,80,9638.65,54.8,56.1,8,3,1
+EMP0057,Juan Ruiz Morales,Almacén,Logística,30,Masculino,4,8713.56,32.5,24.4,7,5,0
+EMP0058,Luis Sánchez Castro,Almacén,Logística,45,Masculino,9,9183.48,37.3,38.0,11,4,1
+EMP0059,Adriana Hernández Vázquez,Ventas Técnicas,Ventas,53,Femenino,4,32848.65,14.1,7.6,16,4,0
+EMP0060,María Moreno Castro,Almacén,Logística,28,Masculino,6,10766.48,28.9,43.1,17,4,1
+EMP0061,Ana Jiménez Salazar,Almacén,Logística,33,Masculino,19,12577.39,13.7,30.3,12,3,0
+EMP0062,Jorge Torres Reyes,Ventas Técnicas,Ventas,51,Masculino,30,30904.5,7.4,4.7,12,4,0
+EMP0063,Jorge Ramírez Morales,Almacén,Logística,32,Masculino,9,13264.66,26.9,43.2,16,3,0
+EMP0064,Arturo Jiménez Jiménez,Almacén,Logística,28,Femenino,8,10234.98,35.0,41.9,12,3,0
+EMP0065,Pedro Vázquez Ruiz,Almacén,Logística,49,Masculino,27,9663.73,25.4,12.5,18,3,0
+EMP0066,Ana Díaz Pérez,Almacén,Logística,41,Femenino,5,13823.04,41.4,28.0,11,5,0
+EMP0067,Adriana Castillo Reyes,Almacén,Logística,27,Femenino,77,11150.14,22.6,44.3,5,4,0
+EMP0068,Leticia Mendoza López,Ventas Técnicas,Ventas,32,Masculino,16,36115.85,13.9,18.9,9,2,0
+EMP0069,Silvia González Ramírez,Ventas Técnicas,Ventas,36,Masculino,17,27907.63,11.5,12.6,8,2,0
+EMP0070,Ricardo Vargas Guzmán,Ventas Técnicas,Ventas,36,No binario,28,32069.65,13.1,6.3,13,4,0
+EMP0071,Elena Flores Salazar,Ventas Técnicas,Ventas,36,Masculino,18,32775.18,26.3,0.3,11,3,0
+EMP0072,Monica Reyes Ramírez,Ventas Técnicas,Ventas,23,Masculino,6,36678.39,26.6,3.4,15,3,0
+EMP0073,Arturo García Torres,Almacén,Logística,26,Masculino,9,9907.53,31.2,32.2,14,3,0
+EMP0074,Leticia Torres Castro,Ventas Técnicas,Ventas,22,Femenino,3,33630.67,5.5,1.6,13,3,0
+EMP0075,Roberto Alvarez Ortiz,Almacén,Logística,37,Masculino,18,9775.54,24.5,24.0,17,4,0
+EMP0076,Patricia Guzmán López,Almacén,Logística,34,Femenino,1,11461.7,7.6,17.5,8,1,0
+EMP0077,Fernando Ruiz Jiménez,Almacén,Logística,27,Femenino,26,10372.79,27.0,8.0,9,2,0
+EMP0078,Gabriela Flores Ruiz,Almacén,Logística,48,Femenino,28,13498.21,35.8,23.1,12,2,0
+EMP0079,Ricardo Ruiz Díaz,Ventas Técnicas,Ventas,26,Femenino,28,36032.97,8.9,1.3,14,3,0
+EMP0080,Fernando Salazar Flores,Almacén,Logística,40,Masculino,83,9712.46,31.1,35.0,12,3,0
+EMP0081,Silvia Pérez Ramos,Almacén,Logística,27,Femenino,3,8721.23,21.6,59.8,9,4,0
+EMP0082,Pedro Alvarez Díaz,Almacén,Logística,31,Femenino,27,9909.29,19.3,10.8,15,3,0
+EMP0083,Pedro Guzmán Medina,Ventas Técnicas,Ventas,30,Femenino,21,30868.77,17.2,8.4,18,3,0
+EMP0084,Elena Rodríguez Flores,Almacén,Logística,50,Masculino,107,10940.67,30.8,19.3,9,2,0
+EMP0085,Leticia Jiménez Ramos,Ventas Técnicas,Ventas,32,Femenino,39,36432.59,11.9,4.5,10,4,0
+EMP0086,Adriana Vargas Díaz,Almacén,Logística,30,Femenino,1,11123.43,36.7,47.0,12,4,0
+EMP0087,Javier Ortiz Vargas,Almacén,Logística,43,No binario,17,9974.85,45.6,18.6,10,3,0
+EMP0088,Arturo Moreno López,Ventas Técnicas,Ventas,24,Masculino,1,31826.58,15.3,2.1,15,3,0
+EMP0089,Patricia Rodríguez López,Almacén,Logística,52,Femenino,19,12023.93,11.5,31.2,19,3,0
+EMP0090,Daniel Alvarez Flores,Ventas Técnicas,Ventas,30,Masculino,6,28884.3,9.3,4.3,11,3,0
+EMP0091,Silvia Hernández Guzmán,Almacén,Logística,45,Masculino,8,10747.83,24.4,9.3,9,4,0
+EMP0092,Silvia Vázquez Hernández,Ventas Técnicas,Ventas,47,Femenino,50,35292.72,37.4,0.7,14,2,0
+EMP0093,Daniel Salazar Vázquez,Almacén,Logística,41,Masculino,3,9113.99,21.8,46.3,16,3,1
+EMP0094,Juan Herrera López,Almacén,Logística,31,Femenino,64,11885.98,37.4,31.6,14,3,1
+EMP0095,Elena Guzmán Moreno,Ventas Técnicas,Ventas,28,Femenino,64,35575.04,12.0,8.0,8,4,0
+EMP0096,Ana González Jiménez,Almacén,Logística,21,Masculino,11,11286.65,22.5,37.6,15,4,1
+EMP0097,Monica Ramírez Flores,Almacén,Logística,53,Masculino,13,8974.63,29.7,28.1,14,3,0
+EMP0098,Carmen Ramos Díaz,Almacén,Logística,25,Femenino,27,12792.57,8.7,30.9,12,3,0
+EMP0099,Eduardo González Guzmán,Ventas Técnicas,Ventas,31,Masculino,156,29370.97,4.7,2.2,14,3,0
+EMP0100,Alejandro Guzmán Ortiz,Almacén,Logística,28,Femenino,17,12062.53,20.7,35.5,11,3,0
+EMP0101,Silvia Ruiz Díaz,Almacén,Logística,23,Masculino,32,12425.75,18.3,30.5,13,1,0
+EMP0102,Alejandro Moreno Ramos,Ventas Técnicas,Ventas,39,Femenino,48,34283.77,6.6,6.7,11,3,0
+EMP0103,Francisco Medina Jiménez,Almacén,Logística,38,Masculino,10,10048.09,35.5,19.4,10,4,0
+EMP0104,Silvia Ruiz Rodríguez,Almacén,Logística,24,Femenino,20,8000.0,19.1,20.0,12,3,0
+EMP0105,Carmen González Sánchez,Almacén,Logística,22,Femenino,12,9685.52,22.4,13.6,14,3,0
+EMP0106,Eduardo Ortiz Salazar,Almacén,Logística,27,Masculino,31,10578.35,50.1,30.8,15,4,1
+EMP0107,Miguel Sánchez Herrera,Almacén,Logística,49,Masculino,24,10703.07,40.9,59.0,5,2,1
+EMP0108,Luis Morales Hernández,Almacén,Logística,30,Femenino,112,11296.87,12.1,18.5,12,3,0
+EMP0109,Ricardo Moreno Ramos,Ventas Técnicas,Ventas,57,Masculino,111,26360.86,18.5,5.5,14,3,0
+EMP0110,Silvia Hernández Vázquez,Almacén,Logística,33,Masculino,132,8497.12,8.5,65.9,11,3,1
+EMP0111,José Ramos Torres,Almacén,Logística,30,Femenino,30,13065.21,32.2,33.0,12,4,0
+EMP0112,Francisco García Rodríguez,Ventas Técnicas,Ventas,36,Masculino,14,33303.37,5.9,9.3,9,3,0
+EMP0113,Alejandro Vargas Rodríguez,Almacén,Logística,27,Femenino,106,8666.15,19.0,26.4,16,3,0
+EMP0114,Miguel Gómez Gómez,Ventas Técnicas,Ventas,41,Femenino,6,25585.04,21.5,18.3,15,4,0
+EMP0115,Elena López Sánchez,Almacén,Logística,27,Masculino,10,11072.58,15.0,37.3,12,2,0
+EMP0116,Daniel Morales Alvarez,Almacén,Logística,53,No binario,1,10878.93,23.6,32.3,12,3,0
+EMP0117,Guadalupe Vargas Martínez,Almacén,Logística,23,Masculino,12,9592.3,30.3,17.5,8,4,0
+EMP0118,José Martínez González,Almacén,Logística,41,Femenino,21,13871.05,35.0,30.0,18,3,0
+EMP0119,Carmen Guzmán Díaz,Ventas Técnicas,Ventas,40,Masculino,16,28141.86,15.9,6.6,15,3,0
+EMP0120,Carmen Ortiz Sánchez,Ventas Técnicas,Ventas,34,Femenino,12,33643.81,23.8,11.4,11,2,0
+EMP0121,Patricia Salazar Alvarez,Almacén,Logística,21,Masculino,12,9082.97,8.0,13.7,11,2,0
+EMP0122,Ana Sánchez Vázquez,Almacén,Logística,40,Femenino,29,8000.0,5.0,16.8,12,3,0
+EMP0123,Eduardo Ramírez Vázquez,Almacén,Logística,34,Masculino,27,14492.93,31.4,34.8,17,4,0
+EMP0124,Sofía Ortiz García,Ventas Técnicas,Ventas,51,Masculino,13,36267.08,13.1,2.5,10,3,0
+EMP0125,Francisco Vargas Vázquez,Almacén,Logística,39,Masculino,38,10095.01,8.3,34.0,12,2,1
+EMP0126,Francisco Torres Ortiz,Almacén,Logística,31,Femenino,99,9547.48,42.3,24.3,13,4,0
+EMP0127,Rosa Martínez González,Almacén,Logística,30,Masculino,29,12724.13,18.7,11.4,11,2,0
+EMP0128,Fernando Gómez Alvarez,Almacén,Logística,35,Femenino,27,9960.64,28.6,16.2,6,3,0
+EMP0129,Miguel Moreno Morales,Almacén,Logística,37,Femenino,8,13189.24,7.8,15.5,14,5,0
+EMP0130,Jorge Ramírez Vázquez,Almacén,Logística,27,Masculino,39,13458.68,8.1,34.2,17,3,0
+EMP0131,Silvia Torres Pérez,Almacén,Logística,33,Masculino,3,9861.44,22.4,28.8,14,3,0
+EMP0132,Javier Guzmán Jiménez,Almacén,Logística,40,Masculino,155,8666.16,31.0,64.4,5,5,1
+EMP0133,María Sánchez Díaz,Almacén,Logística,41,Masculino,7,9627.56,22.9,16.2,9,2,1
+EMP0134,Roberto Gómez Alvarez,Almacén,Logística,50,No binario,24,12854.14,22.9,47.1,15,4,1
+EMP0135,Miguel Ramos Torres,Almacén,Logística,41,Femenino,2,9394.11,13.3,7.2,11,3,0
+EMP0136,Juan Castro Ortiz,Almacén,Logística,36,Femenino,146,11761.99,17.9,32.5,16,4,0
+EMP0137,Javier Ramírez García,Ventas Técnicas,Ventas,45,Femenino,47,29464.38,11.5,11.1,16,4,0
+EMP0138,Roberto Guzmán Ortiz,Ventas Técnicas,Ventas,36,Femenino,28,27507.66,8.7,11.0,8,2,0
+EMP0139,Ricardo Herrera Rodríguez,Almacén,Logística,28,Masculino,99,11761.64,22.6,26.3,7,3,0
+EMP0140,Adriana Castillo Herrera,Almacén,Logística,40,Femenino,5,8036.8,15.0,24.5,9,2,0
+EMP0141,Patricia Castro Mendoza,Almacén,Logística,26,Masculino,36,11023.53,14.6,32.1,13,3,0
+EMP0142,Francisco Torres Medina,Almacén,Logística,48,Masculino,18,12785.97,16.7,12.1,12,3,0
+EMP0143,Monica Sánchez Castillo,Almacén,Logística,28,Femenino,23,9508.84,21.6,46.5,12,3,1
+EMP0144,Monica Gómez Sánchez,Almacén,Logística,35,Femenino,15,10762.21,13.4,45.3,12,3,0
+EMP0145,Eduardo Pérez Castillo,Almacén,Logística,39,Femenino,29,9318.77,22.4,16.1,12,1,0
+EMP0146,Sofía Ortiz Medina,Almacén,Logística,42,Masculino,3,8979.31,12.6,36.3,8,3,0
+EMP0147,Leticia Medina Ortiz,Almacén,Logística,31,Femenino,1,12736.72,35.5,16.0,9,3,0
+EMP0148,Guadalupe Castro López,Almacén,Logística,40,Femenino,23,10034.72,34.5,52.2,7,4,1
+EMP0149,Eduardo Hernández Mendoza,Almacén,Logística,33,Masculino,17,13698.91,55.1,12.6,7,4,0
+EMP0150,Eduardo Moreno Rodríguez,Almacén,Logística,31,Femenino,51,10749.32,25.4,46.8,15,2,1
+EMP0151,Miguel Vargas Vázquez,Almacén,Logística,55,Masculino,84,10789.94,26.9,17.1,12,3,0
+EMP0152,Carlos Alvarez Gómez,Almacén,Logística,38,Masculino,22,11848.26,7.3,30.3,8,1,0
+EMP0153,Leticia López González,Almacén,Logística,42,Masculino,145,12350.34,19.7,15.1,13,3,0
+EMP0154,Adriana Torres Flores,Almacén,Logística,33,Masculino,46,10798.97,22.2,9.8,10,5,0
+EMP0155,Leticia Morales Martínez,Almacén,Logística,35,Masculino,39,9340.54,24.7,41.1,14,3,0
+EMP0156,Laura López Vargas,Almacén,Logística,44,Masculino,3,10172.21,66.4,27.2,13,3,1
+EMP0157,Rosa Mendoza Gómez,Ventas Técnicas,Ventas,31,Femenino,53,28560.31,7.7,7.0,15,4,0
+EMP0158,Daniel Reyes Salazar,Ventas Técnicas,Ventas,34,Masculino,5,28415.89,3.2,10.6,13,3,0
+EMP0159,Sofía Castro Martínez,Almacén,Logística,27,Femenino,16,8951.81,18.0,44.2,8,3,1
+EMP0160,Sofía Salazar Castro,Almacén,Logística,23,Masculino,54,11211.33,7.3,43.1,11,2,0
+EMP0161,Patricia Vargas Torres,Almacén,Logística,42,Masculino,21,10707.58,47.1,19.4,13,4,0
+EMP0162,Leticia Guzmán Flores,Ventas Técnicas,Ventas,53,Femenino,3,31499.23,11.7,9.6,9,3,0
+EMP0163,Monica Hernández Vázquez,Almacén,Logística,25,Femenino,21,10668.33,4.2,40.1,21,4,0
+EMP0164,Luis López Medina,Almacén,Logística,34,Masculino,10,12191.4,10.5,10.7,13,2,0
+EMP0165,Pedro Guzmán Ortiz,Almacén,Logística,30,Masculino,9,14622.19,24.4,45.5,16,2,0
+EMP0166,Leticia Ortiz Díaz,Almacén,Logística,37,Femenino,3,9391.79,2.6,19.5,14,2,0
+EMP0167,Silvia Vargas Ruiz,Almacén,Logística,45,Masculino,19,14015.01,15.4,15.6,15,3,0
+EMP0168,Gabriela González Vargas,Almacén,Logística,48,Femenino,62,10562.28,21.3,16.2,12,3,0
+EMP0169,Javier García Ramírez,Almacén,Logística,33,Femenino,45,8253.85,24.4,62.5,11,3,1
+EMP0170,Rosa Hernández Vázquez,Ventas Técnicas,Ventas,41,Masculino,48,37400.24,21.4,4.6,9,4,0
+EMP0171,Gabriela Ortiz Herrera,Almacén,Logística,28,Femenino,18,9896.29,24.4,25.7,14,2,0
+EMP0172,Guadalupe Ramírez Alvarez,Almacén,Logística,34,Femenino,6,13118.33,22.4,21.7,17,3,0
+EMP0173,Javier Castro Moreno,Almacén,Logística,47,Masculino,52,13711.81,26.3,49.1,10,4,0
+EMP0174,Gabriela Hernández Ortiz,Ventas Técnicas,Ventas,29,Masculino,38,31409.66,9.2,4.7,15,3,0
+EMP0175,Pedro Jiménez García,Almacén,Logística,46,Masculino,20,11056.93,23.6,12.0,6,4,0
+EMP0176,Carmen Mendoza Ruiz,Almacén,Logística,46,Masculino,10,12781.52,41.9,42.7,9,3,1
+EMP0177,Alejandro Salazar Castillo,Almacén,Logística,51,Femenino,62,12085.42,30.6,31.6,13,3,0
+EMP0178,Pedro Moreno González,Ventas Técnicas,Ventas,47,Masculino,24,30793.71,15.5,6.6,18,4,0
+EMP0179,Eduardo Castro Vázquez,Almacén,Logística,50,Masculino,43,12332.99,16.5,30.9,9,3,1
+EMP0180,Adriana Ramos Torres,Almacén,Logística,38,Masculino,11,13757.28,36.4,14.9,16,3,0
+EMP0181,Eduardo Morales Hernández,Almacén,Logística,29,Femenino,3,12101.46,15.4,26.3,16,2,1
+EMP0182,Ana Rodríguez Rodríguez,Almacén,Logística,49,Masculino,34,12742.82,30.4,86.1,11,3,1
+EMP0183,Miguel Jiménez Hernández,Ventas Técnicas,Ventas,35,Femenino,29,38109.0,33.3,7.5,11,3,0
+EMP0184,María Sánchez Mendoza,Ventas Técnicas,Ventas,38,Femenino,41,23990.17,42.1,7.7,10,1,0
+EMP0185,Rosa López Díaz,Almacén,Logística,31,Masculino,107,10669.71,5.8,9.4,12,1,0
+EMP0186,Fernando Gómez Ortiz,Almacén,Logística,24,Masculino,4,12140.08,37.0,18.0,10,3,0
+EMP0187,Leticia Ramos Ruiz,Almacén,Logística,39,Masculino,4,11155.32,5.3,24.5,9,3,0
+EMP0188,Elena Alvarez Herrera,Almacén,Logística,49,Masculino,38,8628.21,34.0,27.5,7,3,0
+EMP0189,Leticia López Mendoza,Almacén,Logística,27,Masculino,17,10077.84,20.5,26.4,19,3,0
+EMP0190,Elena Moreno Hernández,Almacén,Logística,38,Masculino,1,12062.32,24.8,31.2,17,3,0
+EMP0191,Arturo Jiménez Castillo,Ventas Técnicas,Ventas,22,Masculino,17,35182.98,12.3,0.5,7,3,0
+EMP0192,Elena Ramírez Rodríguez,Ventas Técnicas,Ventas,40,Femenino,57,28768.86,33.7,2.5,11,4,0
+EMP0193,Jorge Gómez Pérez,Almacén,Logística,50,Femenino,17,9358.12,32.4,7.7,14,3,0
+EMP0194,Fernando Vázquez Sánchez,Almacén,Logística,34,Masculino,5,10537.95,32.2,26.0,10,3,0
+EMP0195,Silvia Gómez Hernández,Almacén,Logística,40,Masculino,28,10757.98,10.6,17.8,14,3,0
+EMP0196,Guadalupe Gómez Ruiz,Almacén,Logística,36,Masculino,100,10345.42,20.8,12.7,15,3,0
+EMP0197,Francisco Moreno Gómez,Almacén,Logística,27,Femenino,94,10457.28,31.0,20.9,21,3,0
+EMP0198,Carlos Díaz Ramírez,Ventas Técnicas,Ventas,37,Masculino,6,40662.57,41.1,5.7,9,2,0
+EMP0199,Laura Hernández Guzmán,Ventas Técnicas,Ventas,31,Masculino,102,38138.6,2.8,13.1,11,3,0
+EMP0200,Arturo Vázquez González,Almacén,Logística,57,Masculino,64,12651.44,53.0,19.5,12,3,0
+EMP0201,Guadalupe Pérez Moreno,Almacén,Logística,49,Femenino,39,9086.25,37.0,26.8,19,3,0
+EMP0202,Eduardo Castillo García,Ventas Técnicas,Ventas,35,No binario,60,23134.84,26.5,12.0,12,3,0
+EMP0203,Carlos Vargas Flores,Ventas Técnicas,Ventas,55,Femenino,16,28373.66,18.1,12.1,8,4,0
+EMP0204,Pedro López Vargas,Almacén,Logística,46,Masculino,68,11890.34,2.6,64.7,14,3,0
+EMP0205,Roberto Pérez González,Almacén,Logística,45,Masculino,10,10637.88,34.9,33.4,15,4,0
+EMP0206,Arturo Medina Ruiz,Ventas Técnicas,Ventas,40,Femenino,44,33757.24,24.1,2.9,11,3,0
+EMP0207,Laura Alvarez Pérez,Almacén,Logística,45,Masculino,89,10963.96,6.6,28.5,15,2,0
+EMP0208,Arturo Guzmán Sánchez,Ventas Técnicas,Ventas,34,Masculino,11,28154.29,7.0,6.0,10,3,0
+EMP0209,Alejandro Medina López,Almacén,Logística,55,Femenino,28,12051.1,41.6,10.9,12,3,1
+EMP0210,Monica Mendoza Castillo,Almacén,Logística,25,Femenino,35,12210.68,12.6,28.9,8,3,0
+EMP0211,Juan Ramírez Guzmán,Almacén,Logística,31,Masculino,5,13054.56,16.5,27.6,4,3,0
+EMP0212,Ana López Ruiz,Almacén,Logística,46,Masculino,1,12237.65,13.5,21.6,16,4,0
+EMP0213,Sofía Vargas Martínez,Almacén,Logística,34,Femenino,73,9833.69,26.8,23.9,12,3,0
+EMP0214,María Ortiz Guzmán,Ventas Técnicas,Ventas,21,Femenino,6,36826.99,26.2,2.1,15,1,0
+EMP0215,Juan López García,Almacén,Logística,53,Masculino,21,12587.73,9.2,4.7,11,4,0
+EMP0216,Gabriela Vargas Vargas,Almacén,Logística,45,Masculino,57,11933.31,11.3,21.6,13,2,0
+EMP0217,Pedro Alvarez Flores,Almacén,Logística,42,Femenino,12,11547.69,11.0,56.7,17,3,0
+EMP0218,Juan Martínez Ramírez,Almacén,Logística,27,Masculino,22,12111.24,16.6,9.2,7,3,0
+EMP0219,Carlos López Herrera,Almacén,Logística,37,Masculino,28,9299.28,21.8,21.8,14,4,0
+EMP0220,Elena Reyes Hernández,Almacén,Logística,36,Femenino,112,12009.29,29.5,42.0,10,1,1
+EMP0221,Leticia González Jiménez,Ventas Técnicas,Ventas,40,Masculino,110,28288.85,14.8,8.7,11,2,0
+EMP0222,Fernando Medina Gómez,Almacén,Logística,30,Masculino,20,10736.22,47.1,33.8,10,2,1
+EMP0223,Daniel Alvarez Hernández,Ventas Técnicas,Ventas,39,Masculino,46,32258.13,6.2,8.7,11,3,0
+EMP0224,Fernando Reyes Sánchez,Ventas Técnicas,Ventas,50,Masculino,11,36936.67,12.7,2.0,12,3,0
+EMP0225,Carmen Rodríguez Herrera,Almacén,Logística,26,Femenino,10,10766.27,20.0,50.3,4,3,0
+EMP0226,Monica Salazar Guzmán,Ventas Técnicas,Ventas,24,Masculino,56,29853.78,18.7,7.3,11,2,0
+EMP0227,Guadalupe Reyes Torres,Almacén,Logística,55,Femenino,7,11497.77,27.3,25.6,12,3,0
+EMP0228,Fernando Moreno García,Ventas Técnicas,Ventas,40,Femenino,6,39420.58,16.5,11.8,13,3,0
+EMP0229,Carlos Jiménez Guzmán,Almacén,Logística,42,Femenino,4,10688.78,17.4,24.4,7,3,0
+EMP0230,Javier Morales Ortiz,Almacén,Logística,57,Femenino,2,10025.94,40.9,29.0,13,4,0
+EMP0231,María Jiménez Ramos,Ventas Técnicas,Ventas,37,Masculino,14,32752.03,5.7,12.9,7,3,0
+EMP0232,Adriana Vázquez González,Almacén,Logística,24,Masculino,6,10389.45,30.9,9.1,12,3,0
+EMP0233,Francisco González Flores,Almacén,Logística,49,Masculino,88,13975.08,19.9,40.8,12,3,1
+EMP0234,Carmen López González,Almacén,Logística,32,Masculino,58,8000.0,24.4,19.1,15,2,0
+EMP0235,Ana Ramírez Castillo,Almacén,Logística,37,Femenino,10,12436.59,16.7,24.2,12,5,0
+EMP0236,Eduardo Alvarez Ruiz,Ventas Técnicas,Ventas,32,Masculino,11,35396.87,6.0,5.5,10,4,0
+EMP0237,Jorge Flores Díaz,Almacén,Logística,33,Masculino,70,12700.44,15.8,51.5,6,3,1
+EMP0238,Carmen Reyes Torres,Almacén,Logística,44,Masculino,27,11975.68,8.9,41.8,12,3,1
+EMP0239,Fernando Reyes Castillo,Almacén,Logística,46,Femenino,36,12205.05,18.5,60.4,9,2,0
+EMP0240,Elena Hernández Vargas,Ventas Técnicas,Ventas,32,Masculino,116,34197.51,20.8,12.0,11,4,0
+EMP0241,Jorge Hernández Guzmán,Almacén,Logística,33,Femenino,1,11131.95,8.8,20.6,12,2,0
+EMP0242,Eduardo Moreno Mendoza,Almacén,Logística,28,Femenino,12,12040.22,17.8,17.2,13,4,0
+EMP0243,Ricardo Ruiz Herrera,Almacén,Logística,40,Masculino,2,12158.14,7.3,31.6,13,3,0
+EMP0244,Silvia Pérez Morales,Almacén,Logística,25,Masculino,46,10196.3,7.6,19.7,19,3,0
+EMP0245,Fernando Mendoza Sánchez,Ventas Técnicas,Ventas,29,Femenino,17,31183.4,10.2,8.8,7,3,0
+EMP0246,Elena Flores Castro,Ventas Técnicas,Ventas,34,Femenino,13,24517.35,8.7,0.7,13,2,0
+EMP0247,Fernando Díaz Morales,Ventas Técnicas,Ventas,31,Femenino,3,31359.79,32.2,19.8,9,3,0
+EMP0248,Leticia Hernández Flores,Almacén,Logística,32,Femenino,10,12526.49,25.3,22.4,14,3,0
+EMP0249,Elena Flores Ortiz,Ventas Técnicas,Ventas,38,Masculino,9,33383.97,18.6,6.6,8,5,0
+EMP0250,Sofía Gómez López,Ventas Técnicas,Ventas,21,Masculino,18,33126.54,10.5,0.9,14,3,0
+EMP0251,Guadalupe Salazar Jiménez,Ventas Técnicas,Ventas,39,Femenino,9,29804.97,9.6,8.9,15,3,0
+EMP0252,Luis González Castro,Almacén,Logística,31,Masculino,9,10899.23,14.8,56.0,18,3,1
+EMP0253,Luis González Morales,Almacén,Logística,43,Femenino,41,12495.64,14.3,25.9,13,3,0
+EMP0254,María Herrera Herrera,Almacén,Logística,49,Masculino,33,10653.7,43.3,39.1,11,4,0
+EMP0255,Gabriela Vargas López,Ventas Técnicas,Ventas,45,Masculino,11,26913.38,10.4,6.7,5,4,0
+EMP0256,Rosa Rodríguez Alvarez,Almacén,Logística,43,Masculino,16,9115.24,32.7,33.9,7,3,0
+EMP0257,Rosa Ruiz Flores,Ventas Técnicas,Ventas,36,Masculino,24,26805.7,5.1,1.5,10,5,0
+EMP0258,Guadalupe Hernández Morales,Almacén,Logística,33,Masculino,22,10655.3,13.6,10.2,16,3,0
+EMP0259,Gabriela Guzmán Ortiz,Almacén,Logística,28,Femenino,34,11021.5,29.0,14.4,8,3,0
+EMP0260,Ricardo Morales Guzmán,Ventas Técnicas,Ventas,36,Femenino,6,28452.1,5.5,7.7,9,3,0
+EMP0261,Adriana Herrera Rodríguez,Almacén,Logística,30,Masculino,97,8709.17,35.9,68.2,12,3,1
+EMP0262,Miguel Castillo Torres,Almacén,Logística,36,Masculino,16,11491.73,34.4,29.1,10,3,0
+EMP0263,Gabriela Hernández Alvarez,Almacén,Logística,33,Masculino,68,9624.67,22.4,9.8,15,3,0
+EMP0264,Daniel Pérez López,Almacén,Logística,39,Femenino,36,11420.95,49.0,30.8,10,3,1
+EMP0265,Guadalupe Jiménez Sánchez,Almacén,Logística,47,Masculino,65,11507.52,14.0,24.4,17,2,0
+EMP0266,Silvia Hernández Gómez,Almacén,Logística,33,Femenino,24,10089.95,24.5,21.4,13,3,0
+EMP0267,Silvia Ruiz Gómez,Ventas Técnicas,Ventas,33,Masculino,3,38730.89,9.0,12.1,15,2,0
+EMP0268,María Medina Ramírez,Almacén,Logística,38,Femenino,46,9293.47,31.8,35.3,14,3,0
+EMP0269,Roberto Sánchez Vargas,Almacén,Logística,29,Masculino,67,11534.0,24.6,58.1,13,2,1
+EMP0270,Elena Guzmán Ruiz,Almacén,Logística,42,Masculino,10,12607.31,15.5,13.5,11,3,0
+EMP0271,Ricardo Castro Castillo,Ventas Técnicas,Ventas,26,Masculino,36,37779.43,10.2,3.5,13,3,0
+EMP0272,Carmen Ortiz Moreno,Ventas Técnicas,Ventas,41,Masculino,8,36272.63,4.4,11.8,8,3,0
+EMP0273,Rosa García Castillo,Ventas Técnicas,Ventas,34,Masculino,1,30336.81,17.8,7.6,10,5,0
+EMP0274,Adriana Ortiz Castro,Almacén,Logística,46,Femenino,9,10604.83,14.8,27.2,10,4,0
+EMP0275,Jorge Ramírez García,Ventas Técnicas,Ventas,58,Femenino,9,31513.32,9.6,6.7,13,3,0
+EMP0276,José Ramírez Ramos,Ventas Técnicas,Ventas,22,Masculino,44,31327.52,27.5,11.9,13,3,0
+EMP0277,Ricardo Torres Salazar,Almacén,Logística,38,Femenino,27,13653.16,16.8,33.1,18,3,0
+EMP0278,Alejandro Gómez García,Ventas Técnicas,Ventas,57,Masculino,120,25003.47,24.7,11.2,5,3,0
+EMP0279,José Guzmán López,Ventas Técnicas,Ventas,33,Femenino,86,32006.9,5.4,15.8,8,3,0
+EMP0280,Roberto Ortiz Díaz,Almacén,Logística,41,Masculino,19,13012.21,34.9,32.7,15,3,0
+EMP0281,Luis López Herrera,Almacén,Logística,45,Femenino,98,9529.61,79.3,28.9,18,3,1
+EMP0282,Eduardo García González,Almacén,Logística,24,Masculino,1,9273.48,14.0,23.3,17,3,0
+EMP0283,Leticia Reyes Pérez,Almacén,Logística,48,Femenino,7,9656.67,35.5,29.1,12,2,1
+EMP0284,Javier Morales Vázquez,Almacén,Logística,25,Masculino,84,12230.52,26.2,30.0,11,3,0
+EMP0285,Alejandro Martínez Gómez,Ventas Técnicas,Ventas,35,Masculino,10,23488.93,9.9,1.7,7,3,0
+EMP0286,Miguel Herrera Flores,Almacén,Logística,25,Femenino,8,9436.93,17.9,30.4,8,3,0
+EMP0287,Ricardo Alvarez Castillo,Ventas Técnicas,Ventas,37,Masculino,49,33182.09,6.4,9.5,12,3,0
+EMP0288,Luis Mendoza Rodríguez,Almacén,Logística,45,Masculino,2,9493.92,11.0,4.6,14,4,0
+EMP0289,Ana Martínez Medina,Almacén,Logística,37,Masculino,55,9223.46,16.7,24.6,16,4,0
+EMP0290,Carmen Rodríguez Ortiz,Almacén,Logística,32,Masculino,19,13556.16,16.8,30.6,8,3,0
+EMP0291,Luis Ramírez Vázquez,Almacén,Logística,40,Masculino,8,8000.0,33.5,28.5,9,2,1
+EMP0292,Guadalupe Morales Jiménez,Ventas Técnicas,Ventas,31,Femenino,79,26513.49,13.9,10.3,15,2,0
+EMP0293,Carmen Vázquez Morales,Almacén,Logística,46,Femenino,48,11780.0,12.6,31.6,9,4,0
+EMP0294,Sofía Pérez Medina,Almacén,Logística,39,Femenino,42,10538.29,20.4,11.9,9,4,0
+EMP0295,Daniel Hernández Gómez,Almacén,Logística,35,Masculino,43,10932.89,10.8,18.6,8,3,0
+EMP0296,Elena Hernández Torres,Almacén,Logística,36,Masculino,29,13082.51,22.2,40.2,11,2,1
+EMP0297,Guadalupe Ortiz Alvarez,Ventas Técnicas,Ventas,35,Masculino,9,33245.89,7.3,4.6,11,2,0
+EMP0298,Patricia Reyes Ortiz,Ventas Técnicas,Ventas,30,Femenino,34,26349.65,20.4,7.8,12,3,0
+EMP0299,Miguel Rodríguez Sánchez,Almacén,Logística,23,Masculino,60,11758.11,24.3,55.1,9,5,0
+EMP0300,Javier Castillo Rodríguez,Almacén,Logística,42,Masculino,37,12478.17,11.7,11.1,9,4,0
+EMP0301,Juan Pérez Torres,Ventas Técnicas,Ventas,29,Femenino,14,26523.0,15.9,7.6,12,4,0
+EMP0302,Laura Medina López,Almacén,Logística,38,Femenino,71,8000.0,29.2,36.6,9,3,0
+EMP0303,Ricardo Ramírez Torres,Almacén,Logística,48,Masculino,68,10594.76,29.6,15.3,10,4,0
+EMP0304,Alejandro Hernández García,Ventas Técnicas,Ventas,42,Masculino,23,28957.05,12.8,0.6,11,2,0
+EMP0305,Patricia Herrera Morales,Almacén,Logística,49,Masculino,13,12278.27,39.7,29.3,17,3,1
+EMP0306,José López Díaz,Almacén,Logística,46,Masculino,49,12908.53,24.1,14.4,15,3,0
+EMP0307,Rosa Ramos Sánchez,Almacén,Logística,27,Masculino,6,8383.5,29.4,6.7,5,3,0
+EMP0308,Daniel Ruiz Castro,Almacén,Logística,39,Masculino,9,9709.42,6.8,43.0,12,3,1
+EMP0309,Guadalupe Vargas Gómez,Almacén,Logística,32,Femenino,8,10897.58,13.6,19.4,11,3,0
+EMP0310,Luis Díaz Guzmán,Ventas Técnicas,Ventas,27,Femenino,82,34758.7,16.3,28.9,11,3,0
+EMP0311,Leticia Rodríguez Morales,Almacén,Logística,37,Femenino,38,10797.8,14.8,35.1,6,3,1
+EMP0312,Juan Vázquez Salazar,Almacén,Logística,46,Masculino,51,11235.46,8.5,50.5,10,3,0
+EMP0313,Luis Guzmán Flores,Almacén,Logística,25,Femenino,16,10434.43,18.2,24.0,17,3,0
+EMP0314,Roberto Morales Alvarez,Almacén,Logística,42,Masculino,96,10206.0,26.3,21.9,13,3,0
+EMP0315,Javier Ramos Moreno,Ventas Técnicas,Ventas,37,Femenino,34,40131.9,9.6,8.6,16,3,0
+EMP0316,Elena Torres Hernández,Almacén,Logística,30,Femenino,56,10627.21,61.6,3.2,10,3,0
+EMP0317,Javier García Flores,Almacén,Logística,55,Masculino,102,13261.45,15.0,43.2,11,3,0
+EMP0318,José Vargas Castillo,Almacén,Logística,23,No binario,28,11875.32,40.3,44.2,8,3,1
+EMP0319,Fernando Castro Ramos,Ventas Técnicas,Ventas,37,Masculino,17,30360.88,10.8,9.8,11,1,0
+EMP0320,Adriana Gómez González,Almacén,Logística,38,Femenino,6,11377.21,18.0,18.8,11,1,0
+EMP0321,Elena Guzmán Hernández,Almacén,Logística,33,Femenino,1,10726.37,22.4,24.1,12,3,0
+EMP0322,Pedro Morales Alvarez,Almacén,Logística,49,Masculino,15,10943.64,15.5,26.3,15,3,0
+EMP0323,Javier Reyes González,Almacén,Logística,51,Femenino,4,8021.81,15.7,2.4,11,2,0
+EMP0324,Javier Guzmán Torres,Ventas Técnicas,Ventas,45,Femenino,43,30125.89,12.0,6.0,11,2,0
+EMP0325,Leticia Flores Sánchez,Almacén,Logística,33,Masculino,36,11787.79,11.3,13.6,9,4,0
+EMP0326,Alejandro Medina Martínez,Almacén,Logística,45,Femenino,16,9871.35,28.0,16.7,9,5,0
+EMP0327,Luis Reyes Moreno,Almacén,Logística,56,Masculino,114,11907.84,37.5,19.9,13,3,0
+EMP0328,María Reyes Reyes,Almacén,Logística,37,Masculino,58,12068.48,34.5,33.9,9,3,0
+EMP0329,Laura Mendoza Medina,Almacén,Logística,27,Femenino,5,10320.34,34.0,57.3,13,3,0
+EMP0330,Gabriela Gómez Herrera,Almacén,Logística,30,Femenino,36,13284.86,29.9,10.8,5,3,0
+EMP0331,Arturo Moreno Castro,Ventas Técnicas,Ventas,24,Femenino,40,30569.16,10.2,0.4,9,3,0
+EMP0332,Ana Sánchez Hernández,Ventas Técnicas,Ventas,37,Masculino,6,37037.22,5.5,23.7,5,3,0
+EMP0333,Ana Ramírez Pérez,Almacén,Logística,50,Masculino,16,13926.71,27.5,16.3,15,3,0
+EMP0334,José Castillo López,Almacén,Logística,31,Femenino,1,9678.4,14.8,46.8,14,3,1
+EMP0335,Ricardo Medina Moreno,Almacén,Logística,32,Femenino,5,13602.25,24.8,35.7,14,2,0
+EMP0336,Luis Martínez Medina,Almacén,Logística,42,Masculino,14,12755.3,23.6,35.0,12,3,0
+EMP0337,Eduardo Jiménez Vázquez,Almacén,Logística,30,Masculino,3,15148.97,15.5,21.5,11,4,0
+EMP0338,Ricardo Alvarez Medina,Almacén,Logística,38,No binario,51,9189.47,11.8,46.7,7,2,1
+EMP0339,Roberto Vázquez Ortiz,Ventas Técnicas,Ventas,41,Femenino,37,37709.27,18.2,9.6,13,1,0
+EMP0340,Adriana Mendoza Alvarez,Almacén,Logística,35,Masculino,29,10457.81,27.1,81.9,6,2,1
+EMP0341,Eduardo Moreno Castillo,Almacén,Logística,37,Femenino,8,10036.71,37.3,32.7,14,3,0
+EMP0342,Alejandro Guzmán Moreno,Ventas Técnicas,Ventas,49,Femenino,50,39949.19,18.6,4.1,14,3,0
+EMP0343,Alejandro López Vázquez,Almacén,Logística,23,Femenino,12,14246.01,12.2,47.2,15,3,0
+EMP0344,Luis Jiménez Vázquez,Ventas Técnicas,Ventas,30,Femenino,4,34141.58,14.0,5.9,8,5,0
+EMP0345,Eduardo Torres Vargas,Almacén,Logística,33,Masculino,16,10258.47,7.2,10.5,14,4,0
+EMP0346,Sofía Alvarez Rodríguez,Almacén,Logística,40,Femenino,93,10883.83,10.9,7.4,7,2,0
+EMP0347,Gabriela Reyes González,Almacén,Logística,30,Femenino,2,13235.57,57.4,46.3,10,3,1
+EMP0348,Miguel Vázquez Vázquez,Ventas Técnicas,Ventas,37,Masculino,72,24115.02,7.8,5.7,15,4,0
+EMP0349,Carlos Rodríguez Gómez,Almacén,Logística,35,Masculino,30,9275.94,28.1,34.3,22,3,0
+EMP0350,Arturo Torres González,Almacén,Logística,34,Masculino,22,12023.1,23.5,50.5,10,3,1
+EMP0351,Eduardo Guzmán Guzmán,Almacén,Logística,33,Femenino,2,10874.93,33.1,28.4,11,4,0
+EMP0352,Luis Castillo Castillo,Almacén,Logística,38,Femenino,14,11378.85,42.0,47.4,12,3,1
+EMP0353,Daniel Díaz Vázquez,Almacén,Logística,38,Femenino,7,11860.53,23.7,17.6,9,2,0
+EMP0354,Roberto Ruiz Vargas,Ventas Técnicas,Ventas,28,Masculino,7,29611.77,5.5,9.0,11,2,0
+EMP0355,Leticia Mendoza Rodríguez,Ventas Técnicas,Ventas,25,Masculino,3,19507.53,32.5,27.9,21,2,0
+EMP0356,Fernando Salazar Vargas,Ventas Técnicas,Ventas,29,Masculino,24,29940.88,14.4,4.3,8,2,0
+EMP0357,Roberto Moreno Pérez,Almacén,Logística,30,Masculino,14,12231.45,35.3,5.6,14,3,0
+EMP0358,Alejandro Castillo Jiménez,Almacén,Logística,34,Masculino,1,9484.1,16.6,26.9,10,3,0
+EMP0359,Daniel López Rodríguez,Ventas Técnicas,Ventas,29,Masculino,48,34537.1,18.0,28.5,6,3,0
+EMP0360,Fernando Hernández Vargas,Almacén,Logística,57,Femenino,9,11067.83,22.6,9.2,10,3,0
+EMP0361,Francisco Castro Flores,Almacén,Logística,46,Femenino,49,8446.8,14.1,31.9,11,5,0
+EMP0362,Jorge González Reyes,Almacén,Logística,40,Masculino,16,10127.33,11.1,3.3,13,2,0
+EMP0363,Eduardo Martínez Rodríguez,Almacén,Logística,37,Masculino,26,10217.9,30.8,15.4,15,3,0
+EMP0364,Pedro Ramos Vázquez,Ventas Técnicas,Ventas,37,Femenino,48,35435.33,29.2,4.7,13,3,0
+EMP0365,Fernando Reyes Reyes,Almacén,Logística,36,Masculino,11,10082.12,30.2,27.1,12,3,0
+EMP0366,Carmen Martínez Gómez,Almacén,Logística,29,Femenino,1,11343.61,36.8,47.7,13,3,0
+EMP0367,Gabriela Salazar Torres,Almacén,Logística,30,Masculino,11,11587.51,56.6,49.4,6,2,1
+EMP0368,Javier Morales Medina,Almacén,Logística,30,Masculino,10,12859.38,17.8,49.5,18,2,0
+EMP0369,Alejandro Ortiz Castillo,Almacén,Logística,35,Femenino,25,12773.85,39.9,13.8,4,4,0
+EMP0370,Carlos Vargas Moreno,Almacén,Logística,30,Masculino,5,12510.7,22.0,45.5,10,3,0
+EMP0371,Eduardo Flores González,Ventas Técnicas,Ventas,40,Femenino,82,37021.88,8.4,2.4,14,3,0
+EMP0372,Alejandro Hernández Ruiz,Almacén,Logística,32,Masculino,17,10573.77,40.4,37.8,9,4,0
+EMP0373,Guadalupe Díaz Torres,Ventas Técnicas,Ventas,33,Femenino,42,24459.06,5.9,2.3,10,4,0
+EMP0374,Sofía Herrera Guzmán,Almacén,Logística,47,Masculino,59,10947.49,16.1,31.8,14,3,0
+EMP0375,Guadalupe Salazar Castillo,Ventas Técnicas,Ventas,36,Femenino,4,36949.3,8.9,17.9,10,2,0
+EMP0376,Silvia López Flores,Almacén,Logística,43,Femenino,34,9113.2,29.0,20.5,14,4,0
+EMP0377,Luis Alvarez Ortiz,Almacén,Logística,28,Masculino,55,8983.03,24.5,79.7,14,4,1
+EMP0378,Ana Salazar Gómez,Ventas Técnicas,Ventas,41,Femenino,14,33323.88,16.5,11.7,17,5,0
+EMP0379,Miguel Moreno Ramos,Ventas Técnicas,Ventas,39,Femenino,10,36982.62,8.2,10.1,10,3,0
+EMP0380,Guadalupe Díaz López,Almacén,Logística,48,Masculino,22,11059.17,11.3,25.7,6,3,0
+EMP0381,Carmen Ramos González,Almacén,Logística,34,Masculino,47,11765.34,16.9,11.8,15,3,0
+EMP0382,Miguel Ruiz Díaz,Ventas Técnicas,Ventas,57,Femenino,18,20419.28,11.6,11.8,11,1,0
+EMP0383,Eduardo Vargas Flores,Ventas Técnicas,Ventas,46,Femenino,41,32747.1,11.1,2.3,10,3,0
+EMP0384,Arturo López Ortiz,Almacén,Logística,27,Femenino,2,10727.75,20.8,19.4,11,3,0
+EMP0385,Jorge Castro Herrera,Almacén,Logística,47,Femenino,1,10681.36,44.2,30.2,9,5,0
+EMP0386,Guadalupe Salazar Reyes,Ventas Técnicas,Ventas,26,Femenino,37,31944.54,4.8,4.2,16,3,0
+EMP0387,Luis Moreno Ortiz,Almacén,Logística,30,Masculino,3,11353.08,10.0,7.2,17,3,0
+EMP0388,Elena Reyes Gómez,Ventas Técnicas,Ventas,52,Masculino,2,25857.78,6.4,2.1,15,3,0
+EMP0389,Juan Gómez Torres,Ventas Técnicas,Ventas,25,Masculino,73,34425.01,9.9,11.5,16,3,0
+EMP0390,José Pérez Flores,Almacén,Logística,51,Femenino,72,10381.38,15.4,14.6,11,2,0
+EMP0391,Ricardo Jiménez Pérez,Almacén,Logística,28,Femenino,12,13168.8,22.2,13.7,6,3,0
+EMP0392,Pedro López López,Almacén,Logística,31,Masculino,94,11630.29,20.5,31.7,11,2,0
+EMP0393,Luis Torres Guzmán,Ventas Técnicas,Ventas,27,Femenino,108,38573.9,9.2,1.8,17,4,0
+EMP0394,Monica Hernández Reyes,Ventas Técnicas,Ventas,32,Masculino,12,34437.8,4.8,19.5,16,2,0
+EMP0395,Ricardo Ruiz Castro,Ventas Técnicas,Ventas,30,Masculino,11,37916.62,32.2,16.7,12,2,0
+EMP0396,Leticia Mendoza Reyes,Almacén,Logística,48,Masculino,13,10305.59,11.6,45.4,9,2,1
+EMP0397,Carlos Ortiz Flores,Ventas Técnicas,Ventas,31,Masculino,3,26693.53,13.0,9.3,12,2,0
+EMP0398,Francisco Medina Castillo,Almacén,Logística,50,Masculino,12,13480.43,41.0,17.1,15,4,0
+EMP0399,Ana Castillo Díaz,Almacén,Logística,31,Masculino,19,12115.85,13.8,14.7,12,4,0
+EMP0400,Ana Martínez Martínez,Almacén,Logística,43,Femenino,51,9800.09,6.6,46.4,13,4,0
+EMP0401,Arturo Ramos Medina,Almacén,Logística,33,Femenino,2,10167.04,47.3,14.1,10,2,0
+EMP0402,Carmen Vargas Mendoza,Almacén,Logística,37,Femenino,7,12514.21,13.7,14.7,12,3,0
+EMP0403,José Herrera Vázquez,Almacén,Logística,27,Masculino,7,8000.0,35.0,32.5,14,3,1
+EMP0404,Carlos Morales Gómez,Ventas Técnicas,Ventas,54,Femenino,26,38247.52,5.1,15.8,11,4,0
+EMP0405,Guadalupe Herrera Sánchez,Almacén,Logística,47,Masculino,3,10175.59,28.8,31.9,8,3,0
+EMP0406,Fernando Castillo Torres,Ventas Técnicas,Ventas,29,Femenino,8,31535.28,11.5,10.0,18,3,0
+EMP0407,Ricardo Herrera Vargas,Almacén,Logística,42,Masculino,4,12320.43,25.8,6.8,8,3,0
+EMP0408,Fernando Sánchez Ruiz,Almacén,Logística,42,Femenino,77,11759.36,43.2,44.8,12,3,1
+EMP0409,Pedro Torres Vargas,Almacén,Logística,29,Masculino,50,13262.07,52.3,15.8,13,4,0
+EMP0410,Monica Jiménez Mendoza,Almacén,Logística,36,Femenino,12,8000.0,18.5,25.8,12,5,0
+EMP0411,Arturo Pérez Gómez,Almacén,Logística,39,Masculino,9,10594.58,3.3,17.4,16,2,0
+EMP0412,Guadalupe Alvarez Vázquez,Ventas Técnicas,Ventas,43,Masculino,2,27075.03,15.0,17.7,11,3,0
+EMP0413,Fernando Medina Torres,Almacén,Logística,38,Femenino,13,10681.13,15.1,21.1,13,3,0
+EMP0414,Ricardo Díaz Reyes,Ventas Técnicas,Ventas,35,Femenino,20,27953.1,22.8,14.3,12,3,0
+EMP0415,Daniel Morales Martínez,Almacén,Logística,37,Femenino,22,10954.4,20.8,31.4,13,3,0
+EMP0416,Arturo Pérez Vargas,Ventas Técnicas,Ventas,34,Femenino,64,35749.5,15.7,4.7,14,2,0
+EMP0417,Carmen López Guzmán,Ventas Técnicas,Ventas,35,Femenino,8,28162.44,10.0,7.8,9,3,0
+EMP0418,Sofía Rodríguez Moreno,Ventas Técnicas,Ventas,34,Femenino,26,38555.84,11.6,7.5,11,2,0
+EMP0419,Patricia Guzmán Gómez,Almacén,Logística,43,Femenino,86,9711.15,11.6,51.4,10,4,0
+EMP0420,Rosa Salazar Hernández,Almacén,Logística,29,Femenino,48,10801.75,22.8,13.8,13,5,0
+EMP0421,Jorge Guzmán Reyes,Almacén,Logística,45,Masculino,18,9365.98,19.8,28.8,10,3,0
+EMP0422,Silvia Hernández Torres,Almacén,Logística,35,Femenino,41,10635.95,6.6,12.2,8,3,0
+EMP0423,Luis Medina Martínez,Almacén,Logística,41,Masculino,16,8477.63,19.3,25.4,12,3,0
+EMP0424,Sofía Vázquez Mendoza,Almacén,Logística,44,Femenino,60,8721.63,3.5,15.9,11,3,0
+EMP0425,Daniel López Castro,Almacén,Logística,37,Femenino,2,10948.22,22.1,32.8,16,2,1
+EMP0426,Elena González Salazar,Almacén,Logística,31,Masculino,46,8685.8,20.2,32.5,12,5,0
+EMP0427,Pedro Castro Vázquez,Almacén,Logística,26,Masculino,39,10737.77,13.6,17.9,15,3,0
+EMP0428,Francisco Gómez Salazar,Almacén,Logística,34,Femenino,1,11593.7,25.2,8.0,10,4,0
+EMP0429,Juan Morales Rodríguez,Almacén,Logística,36,Femenino,19,14956.54,24.9,12.8,5,2,0
+EMP0430,Javier Reyes Gómez,Almacén,Logística,34,Masculino,22,9714.72,11.4,23.1,18,4,0
+EMP0431,Pedro Díaz González,Almacén,Logística,26,Femenino,6,11645.1,22.5,34.1,11,3,0
+EMP0432,Gabriela Sánchez García,Ventas Técnicas,Ventas,31,No binario,24,20040.22,21.5,39.2,12,3,0
+EMP0433,Alejandro Salazar Hernández,Almacén,Logística,39,No binario,14,10939.17,15.7,33.2,11,3,0
+EMP0434,Arturo Ramos Moreno,Almacén,Logística,38,Femenino,13,10115.16,31.0,7.9,14,3,0
+EMP0435,Alejandro Vargas López,Almacén,Logística,38,Femenino,60,11048.5,24.5,12.8,14,2,0
+EMP0436,Ana Rodríguez Torres,Almacén,Logística,33,Masculino,61,12139.27,18.8,6.8,14,3,0
+EMP0437,Adriana Castro Jiménez,Ventas Técnicas,Ventas,24,Masculino,15,29017.91,5.0,2.1,8,5,0
+EMP0438,Jorge Castro López,Ventas Técnicas,Ventas,35,Masculino,26,37796.91,23.0,8.8,13,3,0
+EMP0439,Ricardo Ramos Jiménez,Almacén,Logística,23,Femenino,56,10085.1,9.0,22.5,6,3,0
+EMP0440,Fernando Castillo García,Ventas Técnicas,Ventas,37,Femenino,5,27076.73,7.9,24.1,11,5,0
+EMP0441,Francisco González García,Almacén,Logística,45,Femenino,9,9922.28,19.8,19.3,16,3,0
+EMP0442,Sofía Pérez Castro,Almacén,Logística,25,Masculino,37,10970.19,20.8,43.3,16,3,1
+EMP0443,Ana Ruiz Herrera,Almacén,Logística,41,Femenino,132,12140.32,30.8,12.2,8,3,0
+EMP0444,Carmen Reyes Morales,Almacén,Logística,35,Masculino,13,12411.77,24.3,30.2,9,3,0
+EMP0445,María Medina Torres,Almacén,Logística,36,Masculino,12,14417.36,19.3,8.2,7,4,0
+EMP0446,Pedro Torres Hernández,Almacén,Logística,27,Femenino,31,11414.9,38.8,58.5,13,3,1
+EMP0447,Carlos Sánchez Morales,Almacén,Logística,37,Masculino,5,8000.0,35.5,35.7,8,3,1
+EMP0448,Eduardo Vargas Castillo,Almacén,Logística,27,Masculino,32,11235.69,24.1,20.0,19,4,1
+EMP0449,Fernando González Hernández,Ventas Técnicas,Ventas,27,Femenino,40,28915.85,21.4,2.6,14,5,0
+EMP0450,Arturo Mendoza Jiménez,Almacén,Logística,25,Femenino,52,9553.7,41.1,49.2,11,3,0
+EMP0451,Carmen Ruiz García,Almacén,Logística,41,Femenino,19,10843.55,15.5,28.3,12,5,0
+EMP0452,Eduardo Reyes Alvarez,Almacén,Logística,35,Masculino,14,11913.36,37.6,48.0,10,3,1
+EMP0453,Pedro Ramos López,Almacén,Logística,38,Masculino,62,10810.8,35.1,28.7,9,4,0
+EMP0454,Miguel Morales García,Almacén,Logística,30,Femenino,24,10157.66,19.6,46.1,13,2,0
+EMP0455,Carmen Gómez Sánchez,Almacén,Logística,25,Masculino,27,11143.6,15.9,12.2,9,3,0
+EMP0456,Roberto Morales Martínez,Ventas Técnicas,Ventas,38,Femenino,41,25334.36,6.4,11.9,7,4,0
+EMP0457,Guadalupe Ortiz González,Almacén,Logística,39,Femenino,7,13800.84,39.6,39.4,10,3,1
+EMP0458,Daniel Gómez González,Ventas Técnicas,Ventas,24,Femenino,27,34570.31,18.1,2.9,12,3,0
+EMP0459,Daniel Ruiz Reyes,Almacén,Logística,43,Masculino,21,9145.22,30.7,39.6,10,3,0
+EMP0460,Monica Reyes Ruiz,Almacén,Logística,31,No binario,11,13516.07,33.6,6.4,7,4,0
+EMP0461,Juan Díaz Guzmán,Almacén,Logística,54,Masculino,19,11226.31,26.7,17.8,8,3,0
+EMP0462,Patricia Rodríguez Moreno,Ventas Técnicas,Ventas,28,Femenino,5,27322.02,6.0,11.1,10,3,0
+EMP0463,Javier Gómez Ramírez,Almacén,Logística,41,Femenino,30,12458.93,20.8,33.2,14,4,0
+EMP0464,Leticia García Gómez,Ventas Técnicas,Ventas,44,Masculino,73,27607.63,30.0,1.4,10,4,0
+EMP0465,Monica González Gómez,Ventas Técnicas,Ventas,29,Femenino,63,27568.12,21.6,10.0,14,3,0
+EMP0466,Pedro Herrera Ortiz,Almacén,Logística,33,Masculino,30,10653.4,25.4,21.2,11,2,0
+EMP0467,Eduardo Hernández Medina,Ventas Técnicas,Ventas,49,Masculino,10,28568.32,7.6,21.3,8,2,0
+EMP0468,Roberto Herrera Medina,Almacén,Logística,45,Masculino,15,11021.22,19.2,17.0,11,5,0
+EMP0469,Alejandro López Rodríguez,Ventas Técnicas,Ventas,31,Femenino,3,35627.64,14.5,5.8,14,3,0
+EMP0470,Gabriela Ruiz Flores,Almacén,Logística,25,Femenino,14,12789.67,23.7,25.5,11,3,0
+EMP0471,Arturo Moreno Martínez,Almacén,Logística,34,Femenino,28,9254.21,50.5,20.7,15,3,0
+EMP0472,Arturo Medina Ortiz,Ventas Técnicas,Ventas,53,Masculino,58,34446.27,11.3,16.1,13,3,0
+EMP0473,Fernando Ramos Jiménez,Almacén,Logística,34,Masculino,38,13501.07,17.6,30.8,9,4,0
+EMP0474,Eduardo Martínez Vargas,Almacén,Logística,31,Masculino,61,12892.28,15.8,64.4,13,5,1
+EMP0475,Ana González Ramos,Ventas Técnicas,Ventas,36,Masculino,26,40742.88,10.4,1.3,12,3,0
+EMP0476,Ricardo Vázquez Rodríguez,Almacén,Logística,33,Masculino,4,10948.17,13.1,68.7,8,4,0
+EMP0477,Miguel Pérez Rodríguez,Almacén,Logística,34,Femenino,22,9147.73,34.9,32.8,14,3,1
+EMP0478,Monica Pérez Mendoza,Almacén,Logística,49,Femenino,3,9417.34,11.1,15.7,9,3,0
+EMP0479,Carlos Flores Salazar,Almacén,Logística,30,Masculino,1,9092.88,10.6,41.4,8,3,0
+EMP0480,Miguel Reyes Díaz,Almacén,Logística,39,Masculino,12,11790.35,40.3,17.4,19,4,0
+EMP0481,Arturo Ruiz Jiménez,Ventas Técnicas,Ventas,49,Masculino,72,34450.4,18.3,10.0,20,2,0
+EMP0482,Sofía Rodríguez Medina,Ventas Técnicas,Ventas,38,Masculino,32,33784.86,13.6,5.4,16,3,0
+EMP0483,Eduardo Pérez Torres,Almacén,Logística,36,Masculino,3,11052.3,53.8,11.9,13,5,0
+EMP0484,Gabriela Guzmán Medina,Almacén,Logística,25,Masculino,30,10925.18,32.1,17.4,12,4,0
+EMP0485,Carlos Guzmán Moreno,Almacén,Logística,37,Masculino,24,10752.32,13.8,22.1,7,3,0
+EMP0486,Alejandro Ramírez Hernández,Ventas Técnicas,Ventas,30,Femenino,31,29965.57,20.8,2.4,16,2,0
+EMP0487,Monica Gómez Morales,Almacén,Logística,28,Masculino,37,10393.63,25.2,35.7,11,3,1
+EMP0488,Francisco Díaz Herrera,Almacén,Logística,36,Masculino,57,11029.07,18.3,45.8,13,4,0
+EMP0489,Fernando Mendoza Díaz,Almacén,Logística,32,Masculino,4,9673.25,16.5,32.9,10,5,0
+EMP0490,Alejandro Martínez Jiménez,Almacén,Logística,31,Masculino,9,8075.94,45.7,21.8,15,3,0
+EMP0491,Jorge Jiménez Gómez,Almacén,Logística,43,Masculino,2,10467.32,27.1,49.2,17,2,0
+EMP0492,Adriana Vargas Reyes,Almacén,Logística,26,Masculino,7,9688.35,30.8,22.6,14,5,0
+EMP0493,Sofía Vargas González,Ventas Técnicas,Ventas,40,Masculino,2,32252.68,29.6,4.4,15,2,0
+EMP0494,Leticia Morales González,Almacén,Logística,27,Masculino,16,9861.85,24.2,34.7,10,4,0
+EMP0495,Elena Castillo Castro,Ventas Técnicas,Ventas,28,Femenino,22,43690.06,11.5,17.8,5,1,0
+EMP0496,José Ruiz Torres,Almacén,Logística,42,Femenino,5,14515.48,19.0,29.4,11,3,0
+EMP0497,Alejandro Hernández González,Almacén,Logística,56,Masculino,2,10198.64,23.8,99.2,8,3,1
+EMP0498,Alejandro Ortiz Torres,Almacén,Logística,30,Femenino,4,13040.17,29.4,35.1,8,3,1
+EMP0499,Miguel Vázquez Castillo,Ventas Técnicas,Ventas,51,Femenino,36,29665.55,8.8,3.1,14,4,0
+EMP0500,Jorge Morales Martínez,Almacén,Logística,32,Masculino,16,13414.28,21.9,17.1,10,4,0
+EMP0501,Jorge Vázquez Gómez,Almacén,Logística,33,Masculino,15,11571.43,17.3,18.9,13,5,0
+EMP0502,Fernando Rodríguez Herrera,Almacén,Logística,33,Femenino,26,9269.76,23.3,39.6,16,3,0
+EMP0503,Silvia Salazar Gómez,Almacén,Logística,49,Femenino,76,11146.87,13.2,34.6,15,2,0
+EMP0504,Carmen Morales Ramírez,Ventas Técnicas,Ventas,29,Masculino,13,39070.94,12.9,5.5,9,4,0
+EMP0505,Eduardo Vargas Rodríguez,Almacén,Logística,54,Masculino,56,11583.75,22.0,42.1,18,3,0
+EMP0506,Luis Ortiz Moreno,Ventas Técnicas,Ventas,40,Femenino,9,24999.65,23.6,4.7,13,3,0
+EMP0507,Javier Gómez Reyes,Almacén,Logística,38,Masculino,61,11719.16,21.2,21.1,10,4,0
+EMP0508,Monica Herrera Ortiz,Ventas Técnicas,Ventas,26,Masculino,39,26850.94,23.7,3.4,15,3,0
+EMP0509,José García López,Almacén,Logística,33,Masculino,23,10233.95,37.9,11.8,18,3,0
+EMP0510,Silvia Castillo Ortiz,Almacén,Logística,23,Femenino,29,12330.62,78.0,35.3,11,2,1
+EMP0511,Monica Vázquez Rodríguez,Almacén,Logística,42,Masculino,24,8554.16,22.6,19.8,10,3,0
+EMP0512,Ana González Sánchez,Almacén,Logística,45,Femenino,17,10319.88,20.1,21.0,14,3,0
+EMP0513,Ricardo Moreno Gómez,Almacén,Logística,38,Masculino,77,11064.17,28.2,27.6,12,3,1
+EMP0514,Gabriela Díaz Alvarez,Almacén,Logística,38,Masculino,14,11597.22,22.2,11.3,18,1,0
+EMP0515,Carlos Castillo López,Ventas Técnicas,Ventas,46,Femenino,104,33162.43,22.1,32.9,15,3,0
+EMP0516,Guadalupe Vázquez Gómez,Ventas Técnicas,Ventas,34,Masculino,42,28566.42,13.2,0.6,16,4,0
+EMP0517,Gabriela Vázquez Medina,Almacén,Logística,48,Masculino,2,10511.4,31.7,36.8,10,3,0
+EMP0518,Luis Alvarez López,Ventas Técnicas,Ventas,34,Masculino,15,32097.29,14.5,8.6,12,3,0
+EMP0519,Daniel Gómez Díaz,Almacén,Logística,28,Masculino,89,9841.38,33.9,28.3,12,3,0
+EMP0520,Alejandro Moreno Ramírez,Ventas Técnicas,Ventas,27,Femenino,5,32503.96,3.6,8.5,12,3,0
+EMP0521,Pedro Hernández García,Almacén,Logística,58,Femenino,17,11940.43,19.0,10.2,10,3,0
+EMP0522,Leticia Martínez Jiménez,Almacén,Logística,31,Femenino,51,13556.15,22.7,16.9,15,4,0
+EMP0523,Daniel Díaz Salazar,Almacén,Logística,54,Femenino,38,11048.75,32.6,12.9,12,1,0
+EMP0524,Rosa Hernández Ramírez,Almacén,Logística,36,Masculino,91,11121.62,10.7,6.8,10,3,0
+EMP0525,Ricardo Ramírez Ramos,Almacén,Logística,27,Femenino,14,10024.53,29.8,21.6,15,4,0
+EMP0526,Fernando Pérez Castillo,Ventas Técnicas,Ventas,41,Femenino,2,31928.65,18.1,10.1,9,3,0
+EMP0527,Miguel Ramos Salazar,Almacén,Logística,28,No binario,8,11948.18,15.6,43.1,9,4,0
+EMP0528,Patricia Pérez Hernández,Almacén,Logística,39,Masculino,7,10388.81,21.6,7.7,12,3,0
+EMP0529,Ana Guzmán González,Ventas Técnicas,Ventas,36,Masculino,27,27592.88,28.4,3.1,13,3,0
+EMP0530,Fernando Martínez Mendoza,Almacén,Logística,37,Femenino,15,9307.91,45.1,6.2,17,3,0
+EMP0531,Jorge Vázquez González,Almacén,Logística,31,Femenino,14,12487.63,24.1,20.4,11,1,0
+EMP0532,Monica Ortiz Guzmán,Almacén,Logística,44,Masculino,19,11320.71,13.3,9.3,9,3,0
+EMP0533,Alejandro Ortiz Gómez,Almacén,Logística,38,Femenino,23,8436.25,39.4,13.4,10,4,0
+EMP0534,Jorge González Ruiz,Almacén,Logística,24,Masculino,4,11093.5,13.7,35.6,14,3,0
+EMP0535,Rosa Torres Mendoza,Ventas Técnicas,Ventas,37,Masculino,52,34218.7,9.8,26.5,12,3,0
+EMP0536,Miguel Guzmán Martínez,Almacén,Logística,38,Femenino,3,11759.24,45.6,21.2,17,3,0
+EMP0537,Jorge Ramos Salazar,Almacén,Logística,49,Femenino,35,10398.63,32.8,19.3,10,3,0
+EMP0538,Jorge Moreno Martínez,Almacén,Logística,34,Femenino,13,8775.52,27.7,29.7,15,2,0
+EMP0539,Monica Gómez Reyes,Almacén,Logística,45,Masculino,9,11541.54,35.1,48.5,9,3,1
+EMP0540,Pedro Hernández Pérez,Almacén,Logística,22,Femenino,14,14881.86,29.8,5.8,9,4,0
+EMP0541,Monica López Sánchez,Almacén,Logística,42,Femenino,33,12681.27,16.5,55.0,10,4,1
+EMP0542,Monica Jiménez García,Ventas Técnicas,Ventas,37,Femenino,33,34283.44,20.6,2.4,11,3,0
+EMP0543,Gabriela Ruiz Alvarez,Ventas Técnicas,Ventas,31,Masculino,45,41536.49,4.7,3.5,15,3,0
+EMP0544,Gabriela Vázquez Vargas,Almacén,Logística,32,Femenino,6,10609.54,30.4,26.7,19,2,1
+EMP0545,Rosa López Castillo,Ventas Técnicas,Ventas,47,Femenino,20,23952.4,8.4,4.1,11,3,0
+EMP0546,Francisco González González,Almacén,Logística,31,No binario,10,10617.58,18.8,21.3,10,4,0
+EMP0547,Miguel Díaz Ramos,Ventas Técnicas,Ventas,28,Femenino,17,36998.57,7.3,5.4,10,4,0
+EMP0548,Leticia Jiménez Reyes,Ventas Técnicas,Ventas,45,Femenino,58,20993.78,26.7,8.4,10,3,0
+EMP0549,Elena Medina Morales,Almacén,Logística,32,Femenino,4,9965.13,22.5,22.7,15,3,0
+EMP0550,Arturo Alvarez González,Almacén,Logística,32,Masculino,45,8753.83,20.7,51.9,18,3,1
+EMP0551,Ana Flores Moreno,Almacén,Logística,36,Masculino,111,10213.46,28.8,14.5,6,4,0
+EMP0552,Luis Vázquez Vázquez,Almacén,Logística,28,Femenino,14,13526.79,11.8,31.1,8,2,0
+EMP0553,Guadalupe Reyes Gómez,Almacén,Logística,29,Femenino,17,14265.58,11.4,26.8,10,3,0
+EMP0554,Ana Mendoza Castro,Almacén,Logística,39,Femenino,3,11224.01,22.7,15.4,8,5,0
+EMP0555,Ricardo Ruiz Moreno,Ventas Técnicas,Ventas,26,Masculino,30,36544.06,10.3,4.1,9,3,0
+EMP0556,Roberto Martínez Medina,Ventas Técnicas,Ventas,35,Masculino,87,29382.12,6.8,4.7,11,4,0
+EMP0557,Ana Morales Reyes,Almacén,Logística,21,Femenino,12,8814.98,17.5,26.9,4,4,0
+EMP0558,Adriana Guzmán Rodríguez,Almacén,Logística,35,Femenino,17,10482.28,14.9,14.0,18,3,0
+EMP0559,Arturo Hernández Reyes,Ventas Técnicas,Ventas,24,Femenino,8,41996.2,25.0,24.9,13,2,0
+EMP0560,Ana Torres Martínez,Ventas Técnicas,Ventas,27,Masculino,89,26459.44,2.8,5.4,10,4,0
+EMP0561,José Flores Salazar,Almacén,Logística,24,Femenino,26,10201.74,26.7,23.0,10,3,0
+EMP0562,Jorge Sánchez Gómez,Almacén,Logística,52,Femenino,23,13455.11,28.7,23.7,10,3,0
+EMP0563,Daniel Mendoza Torres,Ventas Técnicas,Ventas,38,Masculino,2,38039.97,2.1,12.6,10,3,0
+EMP0564,Silvia González Ramírez,Almacén,Logística,23,Masculino,60,11799.81,14.1,15.7,13,4,0
+EMP0565,Laura Moreno Ruiz,Almacén,Logística,39,Masculino,2,11662.44,17.5,11.5,9,4,0
+EMP0566,Sofía López Moreno,Almacén,Logística,29,Masculino,22,8745.69,17.9,33.9,15,4,0
+EMP0567,Miguel Castillo Ruiz,Almacén,Logística,44,Femenino,28,10133.58,21.9,13.1,10,3,0
+EMP0568,Luis Reyes Moreno,Ventas Técnicas,Ventas,46,Masculino,10,30231.57,32.6,23.9,18,3,0
+EMP0569,José Alvarez Alvarez,Almacén,Logística,29,Masculino,21,9227.72,22.9,43.4,12,4,0
+EMP0570,Ana Martínez Ortiz,Ventas Técnicas,Ventas,49,Masculino,73,32157.46,19.8,4.5,8,3,0
+EMP0571,Carmen Herrera Mendoza,Ventas Técnicas,Ventas,39,Masculino,3,33686.82,5.1,7.1,13,3,0
+EMP0572,Carmen Flores Castro,Ventas Técnicas,Ventas,34,Femenino,20,37930.73,30.3,8.6,10,4,0
+EMP0573,Adriana Alvarez Rodríguez,Almacén,Logística,30,Masculino,67,11752.69,23.3,32.4,17,3,0
+EMP0574,Arturo Guzmán García,Almacén,Logística,34,Femenino,7,12348.0,22.4,28.0,17,3,0
+EMP0575,Luis Rodríguez Moreno,Ventas Técnicas,Ventas,34,Femenino,20,29928.05,12.0,5.1,10,3,0
+EMP0576,Ricardo Alvarez Ramírez,Ventas Técnicas,Ventas,36,Masculino,41,33639.06,22.7,9.5,15,3,0
+EMP0577,Eduardo Pérez Medina,Almacén,Logística,43,Femenino,4,10294.89,32.3,18.2,10,3,0
+EMP0578,Roberto Morales Castillo,Ventas Técnicas,Ventas,39,Masculino,37,31119.44,14.0,0.8,12,3,0
+EMP0579,Eduardo García Jiménez,Ventas Técnicas,Ventas,26,Femenino,20,30522.49,13.4,1.1,13,3,0
+EMP0580,Francisco Moreno Ruiz,Almacén,Logística,37,Femenino,20,9021.55,22.2,12.8,18,3,0
+EMP0581,Miguel Moreno Torres,Almacén,Logística,36,Masculino,4,11184.1,16.1,9.5,11,3,0
+EMP0582,Patricia Sánchez Vargas,Ventas Técnicas,Ventas,28,Masculino,29,40555.14,18.1,4.0,16,4,0
+EMP0583,Monica Ortiz Díaz,Almacén,Logística,22,Masculino,18,10435.15,22.7,17.7,13,3,0
+EMP0584,Miguel Vázquez González,Almacén,Logística,45,Masculino,71,11130.52,12.1,27.2,8,4,0
+EMP0585,Jorge Rodríguez Martínez,Almacén,Logística,31,Femenino,71,10481.5,29.0,6.7,14,3,0
+EMP0586,Fernando Morales Jiménez,Almacén,Logística,40,Masculino,1,10328.06,10.8,10.4,13,3,0
+EMP0587,Fernando Pérez Flores,Almacén,Logística,32,Femenino,3,9340.29,29.4,51.2,8,3,0
+EMP0588,Carmen López Flores,Ventas Técnicas,Ventas,37,Masculino,11,30080.63,15.1,6.8,12,3,0
+EMP0589,Silvia Ramos Flores,Almacén,Logística,34,Masculino,10,12449.82,15.1,25.8,10,5,0
+EMP0590,Leticia Guzmán Gómez,Almacén,Logística,40,Masculino,18,11774.97,8.5,90.9,8,3,1
+EMP0591,Javier López Medina,Almacén,Logística,38,Masculino,8,8000.0,25.3,32.4,11,3,0
+EMP0592,Gabriela Reyes Ruiz,Almacén,Logística,31,Masculino,19,14147.33,50.9,21.8,12,4,1
+EMP0593,María Flores Sánchez,Almacén,Logística,52,No binario,7,11568.25,31.0,46.1,11,3,1
+EMP0594,Fernando Hernández Ramírez,Almacén,Logística,49,Masculino,34,11205.12,14.2,29.2,6,3,0
+EMP0595,Fernando Sánchez López,Almacén,Logística,26,Femenino,17,13751.3,29.6,17.8,12,2,0
+EMP0596,María Rodríguez Torres,Almacén,Logística,49,Masculino,35,8488.3,30.7,59.8,9,5,0
+EMP0597,Javier Guzmán Castillo,Almacén,Logística,38,Masculino,17,8570.09,18.2,94.0,8,3,1
+EMP0598,Elena Sánchez Guzmán,Ventas Técnicas,Ventas,41,Masculino,15,27028.22,7.2,0.1,10,3,0
+EMP0599,Francisco Martínez Castro,Ventas Técnicas,Ventas,35,Masculino,7,31206.74,15.2,3.6,6,3,0
+EMP0600,Alejandro Salazar Alvarez,Almacén,Logística,41,Masculino,25,10420.19,32.3,11.2,11,3,0
+EMP0601,Leticia Flores Pérez,Almacén,Logística,58,Femenino,29,8913.66,16.9,20.7,11,4,0
+EMP0602,Ricardo Martínez Jiménez,Ventas Técnicas,Ventas,39,Femenino,13,32187.71,24.4,31.2,17,3,0
+EMP0603,Daniel Vázquez Jiménez,Ventas Técnicas,Ventas,34,Masculino,21,31823.05,32.2,2.6,13,2,0
+EMP0604,Francisco Torres Jiménez,Almacén,Logística,32,Masculino,26,11968.84,11.6,27.7,11,3,0
+EMP0605,Juan González Díaz,Almacén,Logística,46,Femenino,163,9406.24,38.5,31.5,15,3,0
+EMP0606,Daniel Vázquez Sánchez,Almacén,Logística,37,Masculino,40,12840.55,8.4,68.2,6,3,1
+EMP0607,Laura Alvarez Gómez,Ventas Técnicas,Ventas,46,Masculino,37,35538.57,9.0,17.6,8,3,0
+EMP0608,Carlos Rodríguez Torres,Almacén,Logística,28,No binario,2,9925.14,32.7,29.2,14,3,1
+EMP0609,Patricia Castillo Mendoza,Almacén,Logística,29,Masculino,22,11176.37,41.8,27.2,7,3,0
+EMP0610,Arturo Moreno Ortiz,Ventas Técnicas,Ventas,50,Femenino,2,35429.29,2.3,9.1,14,1,0
+EMP0611,Patricia Torres Ruiz,Almacén,Logística,37,Masculino,34,9197.62,45.8,18.1,9,5,1
+EMP0612,Juan Guzmán Hernández,Ventas Técnicas,Ventas,40,Masculino,6,36317.64,14.8,2.2,10,3,0
+EMP0613,Elena López Mendoza,Ventas Técnicas,Ventas,49,Masculino,16,34796.69,10.9,0.9,22,4,0
+EMP0614,Sofía Herrera Gómez,Almacén,Logística,28,Femenino,36,14267.84,24.3,40.5,12,3,0
+EMP0615,Ricardo Díaz Gómez,Almacén,Logística,40,No binario,2,10798.43,36.7,9.4,11,3,0
+EMP0616,Carlos Díaz Rodríguez,Almacén,Logística,28,Masculino,36,8859.76,22.8,16.5,6,4,0
+EMP0617,Roberto Ruiz Pérez,Almacén,Logística,42,Femenino,34,11230.02,58.2,20.6,15,3,0
+EMP0618,Gabriela Ruiz Torres,Almacén,Logística,39,Masculino,36,10455.3,33.3,42.3,12,3,0
+EMP0619,Luis Díaz Reyes,Ventas Técnicas,Ventas,25,Femenino,2,32798.04,13.7,12.8,15,3,0
+EMP0620,Fernando Medina Ruiz,Ventas Técnicas,Ventas,25,Femenino,64,34882.26,4.4,2.9,10,5,0
+EMP0621,Sofía Castro Castillo,Almacén,Logística,40,Femenino,14,13605.41,45.0,30.2,9,2,1
+EMP0622,Guadalupe Castillo Hernández,Almacén,Logística,30,Femenino,77,11396.38,21.5,31.4,6,4,0
+EMP0623,Ana Hernández Díaz,Almacén,Logística,36,Masculino,5,11368.11,24.8,16.4,14,3,0
+EMP0624,Gabriela Vargas Flores,Almacén,Logística,42,Masculino,11,14506.74,13.5,14.9,8,2,0
+EMP0625,Rosa Gómez Medina,Ventas Técnicas,Ventas,30,Masculino,42,37318.87,18.4,5.0,13,3,0
+EMP0626,Ana Pérez Castillo,Almacén,Logística,40,Femenino,30,9775.77,9.2,25.8,9,3,0
+EMP0627,Daniel Díaz Reyes,Ventas Técnicas,Ventas,32,Masculino,49,41083.03,13.7,15.2,17,4,0
+EMP0628,Carlos Rodríguez Rodríguez,Almacén,Logística,32,Masculino,78,11095.47,18.0,20.5,14,4,0
+EMP0629,Ana Ramos Flores,Almacén,Logística,30,Masculino,10,8850.58,31.4,32.3,9,2,1
+EMP0630,Monica Jiménez Reyes,Almacén,Logística,30,Masculino,22,11215.14,33.6,10.8,11,4,0
+EMP0631,Fernando López Castillo,Ventas Técnicas,Ventas,37,Masculino,3,23137.11,10.5,1.5,8,3,0
+EMP0632,Francisco Reyes López,Ventas Técnicas,Ventas,33,Femenino,61,23354.09,36.5,19.5,16,2,0
+EMP0633,Alejandro Salazar Castillo,Almacén,Logística,32,Masculino,36,10782.74,15.1,41.6,11,2,1
+EMP0634,Alejandro Martínez Díaz,Almacén,Logística,25,Masculino,7,10171.61,11.6,26.6,14,3,0
+EMP0635,Carmen Herrera Castro,Almacén,Logística,25,Masculino,19,12460.86,35.4,27.2,9,3,0
+EMP0636,Miguel Alvarez Flores,Almacén,Logística,28,Masculino,22,10601.66,41.8,32.6,13,3,1
+EMP0637,Daniel Castro Reyes,Almacén,Logística,24,Femenino,72,12185.02,25.5,20.5,17,3,0
+EMP0638,Rosa Jiménez Ramos,Almacén,Logística,21,Masculino,9,9866.07,26.4,59.7,8,4,1
+EMP0639,Roberto Torres Jiménez,Almacén,Logística,47,Masculino,60,9403.63,15.8,33.1,13,3,0
+EMP0640,Arturo García Gómez,Almacén,Logística,36,Masculino,27,10420.52,5.1,37.7,11,3,1
+EMP0641,Alejandro Ortiz Hernández,Ventas Técnicas,Ventas,51,Femenino,10,33333.5,9.0,7.9,8,4,0
+EMP0642,Elena Alvarez Torres,Almacén,Logística,27,Masculino,19,10395.07,23.0,24.2,12,4,0
+EMP0643,Monica Mendoza Herrera,Almacén,Logística,42,Femenino,38,10315.84,15.9,17.5,11,4,0
+EMP0644,Silvia Ramos Moreno,Almacén,Logística,44,Masculino,55,9213.63,30.8,16.4,9,4,0
+EMP0645,Juan Castillo Jiménez,Almacén,Logística,42,Masculino,35,10476.06,6.4,42.0,14,4,0
+EMP0646,Sofía Moreno Vargas,Almacén,Logística,39,Masculino,8,12652.0,31.3,15.4,12,4,0
+EMP0647,Ricardo Alvarez Alvarez,Ventas Técnicas,Ventas,30,Masculino,16,43020.93,9.5,11.8,10,3,0
+EMP0648,Pedro Herrera Rodríguez,Almacén,Logística,44,Masculino,4,12036.37,17.3,19.7,14,4,0
+EMP0649,Roberto Jiménez Martínez,Almacén,Logística,27,Masculino,6,13711.39,22.4,26.4,10,3,0
+EMP0650,Daniel Moreno Herrera,Ventas Técnicas,Ventas,39,Femenino,9,21614.4,11.5,0.7,16,3,0
+EMP0651,Carmen Medina Castro,Almacén,Logística,33,Femenino,20,13851.68,13.9,19.7,14,5,0
+EMP0652,Javier López Castro,Almacén,Logística,24,Femenino,65,10742.49,37.2,25.8,6,3,0
+EMP0653,Guadalupe Sánchez Rodríguez,Almacén,Logística,45,Femenino,134,11647.02,16.6,23.6,8,3,0
+EMP0654,Roberto Ramos Hernández,Ventas Técnicas,Ventas,36,Femenino,11,24049.29,8.6,3.5,10,2,0
+EMP0655,Laura García Vázquez,Almacén,Logística,31,Femenino,1,10212.78,18.1,33.2,22,3,0
+EMP0656,Alejandro Morales López,Almacén,Logística,33,Masculino,100,8294.37,26.0,41.7,20,3,0
+EMP0657,Elena Ramos Pérez,Almacén,Logística,32,Femenino,9,13035.99,40.6,27.3,15,3,0
+EMP0658,Elena Reyes Medina,Ventas Técnicas,Ventas,34,Masculino,46,28856.65,1.3,4.3,11,4,0
+EMP0659,Carmen Salazar Jiménez,Almacén,Logística,36,Femenino,11,10775.15,9.6,40.5,3,1,1
+EMP0660,Silvia Guzmán Herrera,Ventas Técnicas,Ventas,25,Masculino,84,28169.77,9.9,7.2,17,3,0
+EMP0661,Leticia Rodríguez Ramos,Almacén,Logística,33,Masculino,12,12103.58,11.0,42.3,8,4,0
+EMP0662,Ana Reyes Pérez,Almacén,Logística,40,Masculino,9,9725.42,16.9,5.8,13,3,0
+EMP0663,Rosa Flores Ortiz,Ventas Técnicas,Ventas,47,Femenino,7,36966.67,19.8,0.4,13,3,0
+EMP0664,Patricia Reyes Díaz,Almacén,Logística,44,Masculino,27,11162.02,13.1,33.8,14,1,0
+EMP0665,Alejandro Martínez Vázquez,Almacén,Logística,32,Masculino,34,12834.2,27.4,10.4,11,3,0
+EMP0666,Adriana Ruiz Flores,Almacén,Logística,39,No binario,48,9165.17,42.8,13.2,6,3,0
+EMP0667,Rosa Gómez Ortiz,Ventas Técnicas,Ventas,36,Femenino,17,38462.15,10.7,6.5,17,3,0
+EMP0668,Ricardo Guzmán Herrera,Ventas Técnicas,Ventas,34,Femenino,1,32098.0,7.8,4.5,13,1,0
+EMP0669,Guadalupe Moreno Vargas,Almacén,Logística,44,Femenino,9,11303.34,12.8,36.6,8,3,0
+EMP0670,Jorge Ramírez Castillo,Ventas Técnicas,Ventas,35,Masculino,10,32412.21,10.5,13.0,16,2,0
+EMP0671,Patricia Pérez Sánchez,Almacén,Logística,29,Femenino,18,10391.47,20.8,44.7,15,4,0
+EMP0672,Sofía Ruiz Torres,Almacén,Logística,51,Masculino,20,13212.67,19.9,11.0,16,3,0
+EMP0673,Pedro Torres Medina,Ventas Técnicas,Ventas,46,Femenino,2,33101.84,14.7,17.5,10,2,0
+EMP0674,Miguel Ramos Pérez,Almacén,Logística,45,Masculino,5,10595.07,8.6,21.2,13,2,0
+EMP0675,Jorge Ramos Jiménez,Almacén,Logística,34,Masculino,41,13317.48,6.9,49.3,13,3,0
+EMP0676,Alejandro Jiménez Gómez,Almacén,Logística,40,Masculino,58,10910.52,35.1,8.0,14,3,0
+EMP0677,Rosa Salazar Salazar,Ventas Técnicas,Ventas,35,Femenino,59,31993.66,18.9,16.7,9,3,0
+EMP0678,Monica Herrera Ramírez,Ventas Técnicas,Ventas,33,Masculino,18,43827.04,6.3,6.1,13,2,0
+EMP0679,Miguel Hernández Alvarez,Almacén,Logística,31,Femenino,8,9940.81,18.2,16.0,13,4,0
+EMP0680,Guadalupe Ruiz Díaz,Almacén,Logística,30,Femenino,18,10409.58,22.4,23.7,9,3,0
+EMP0681,Francisco Díaz Castro,Ventas Técnicas,Ventas,41,Masculino,25,35294.68,24.3,4.0,8,3,0
+EMP0682,Gabriela Medina Vargas,Almacén,Logística,32,Femenino,99,13725.13,19.0,32.9,9,3,0
+EMP0683,Ana Torres Rodríguez,Ventas Técnicas,Ventas,22,Masculino,8,29763.91,3.6,9.8,14,5,0
+EMP0684,Miguel Ramos González,Almacén,Logística,30,Masculino,79,12053.99,23.9,30.0,12,2,0
+EMP0685,Gabriela Salazar Vázquez,Almacén,Logística,28,Femenino,19,9124.53,24.5,7.7,23,3,0
+EMP0686,Eduardo Ramírez Herrera,Almacén,Logística,38,Masculino,75,9957.28,13.4,17.9,14,3,0
+EMP0687,Patricia Pérez Pérez,Almacén,Logística,50,Femenino,19,10755.04,38.6,21.9,15,3,0
+EMP0688,Arturo Ruiz Ramírez,Ventas Técnicas,Ventas,22,Femenino,25,26184.79,15.1,21.4,17,4,0
+EMP0689,Adriana Ruiz Ramos,Ventas Técnicas,Ventas,40,Femenino,49,26680.03,32.0,4.2,11,3,0
+EMP0690,Sofía López Hernández,Almacén,Logística,38,Masculino,45,12795.75,17.9,31.1,17,3,0
+EMP0691,Carmen Herrera Alvarez,Almacén,Logística,49,Femenino,18,9929.79,8.8,13.6,6,2,0
+EMP0692,Pedro Sánchez Rodríguez,Ventas Técnicas,Ventas,25,Masculino,10,27389.06,17.0,9.0,12,4,0
+EMP0693,Guadalupe Mendoza Reyes,Ventas Técnicas,Ventas,40,Masculino,57,31988.47,13.2,9.1,10,3,0
+EMP0694,Pedro Moreno Sánchez,Almacén,Logística,42,Masculino,60,13500.89,20.1,11.9,9,4,0
+EMP0695,Carlos Hernández Morales,Almacén,Logística,50,Masculino,150,10625.46,18.0,46.6,13,4,0
+EMP0696,Alejandro Ramos Jiménez,Almacén,Logística,41,Masculino,34,11013.18,8.1,16.6,11,3,0
+EMP0697,María Ortiz Medina,Ventas Técnicas,Ventas,34,Femenino,10,33312.64,3.7,2.8,9,3,0
+EMP0698,Ana García Ruiz,Almacén,Logística,38,Masculino,14,10810.2,47.7,4.6,17,3,0
+EMP0699,Adriana Martínez Morales,Almacén,Logística,36,Masculino,25,13649.36,28.3,37.6,7,3,1
+EMP0700,Eduardo Salazar Mendoza,Almacén,Logística,32,Masculino,5,10103.78,25.5,61.2,16,3,1
+EMP0701,Francisco Jiménez Jiménez,Almacén,Logística,38,Masculino,12,10878.61,20.6,62.4,13,3,1
+EMP0702,Eduardo Pérez Medina,Almacén,Logística,46,Femenino,12,9723.67,14.1,14.8,12,3,0
+EMP0703,Miguel Flores Torres,Almacén,Logística,31,Femenino,33,12423.72,20.0,64.0,12,4,0
+EMP0704,Eduardo Rodríguez Salazar,Almacén,Logística,33,Masculino,61,11385.13,15.2,54.6,10,3,0
+EMP0705,Ricardo González Moreno,Ventas Técnicas,Ventas,35,Masculino,15,31762.51,15.1,8.2,11,2,0
+EMP0706,Roberto Sánchez Ruiz,Ventas Técnicas,Ventas,36,Masculino,5,27925.66,15.3,2.8,16,3,0
+EMP0707,Leticia Herrera Guzmán,Almacén,Logística,36,Masculino,1,11413.98,54.8,31.8,7,2,0
+EMP0708,Adriana Rodríguez Salazar,Almacén,Logística,31,Masculino,25,10300.72,29.5,23.7,9,3,0
+EMP0709,Adriana Martínez Morales,Ventas Técnicas,Ventas,47,Masculino,12,35984.02,35.7,25.6,5,3,0
+EMP0710,Francisco Castro Martínez,Almacén,Logística,34,Masculino,5,10952.72,11.8,25.6,9,5,0
+EMP0711,Adriana Salazar Rodríguez,Almacén,Logística,46,Femenino,17,10624.65,18.5,19.7,14,3,0
+EMP0712,Arturo Díaz Vargas,Almacén,Logística,32,Femenino,3,12447.15,35.8,10.7,9,3,0
+EMP0713,Patricia Martínez Salazar,Ventas Técnicas,Ventas,36,Femenino,87,32019.81,9.1,17.0,17,3,0
+EMP0714,Leticia Guzmán Salazar,Almacén,Logística,40,Femenino,18,11348.14,16.9,24.9,7,2,0
+EMP0715,Miguel Mendoza Rodríguez,Ventas Técnicas,Ventas,39,Femenino,22,33498.48,15.6,22.8,7,3,0
+EMP0716,Juan Torres Alvarez,Almacén,Logística,30,Masculino,27,8072.6,16.7,24.5,14,3,0
+EMP0717,Carmen Hernández Salazar,Almacén,Logística,26,Masculino,10,10580.97,22.0,38.2,19,4,0
+EMP0718,Alejandro Torres Vázquez,Ventas Técnicas,Ventas,43,Femenino,28,23111.6,29.1,19.8,9,3,0
+EMP0719,Eduardo Ruiz Reyes,Ventas Técnicas,Ventas,46,Masculino,18,36901.31,47.2,17.3,13,2,0
+EMP0720,Patricia Mendoza López,Almacén,Logística,55,Masculino,16,11599.2,15.7,18.8,13,4,0
+EMP0721,Silvia Reyes Vázquez,Almacén,Logística,32,Masculino,19,12505.54,18.7,37.9,18,3,0
+EMP0722,Sofía Pérez Vargas,Almacén,Logística,45,Masculino,1,10379.16,6.5,37.9,16,4,0
+EMP0723,María Flores Martínez,Almacén,Logística,36,Masculino,18,11044.99,19.2,54.1,5,3,1
+EMP0724,Leticia Vázquez Moreno,Ventas Técnicas,Ventas,26,Masculino,17,34987.69,3.0,11.8,10,3,0
+EMP0725,Sofía Ramos Martínez,Almacén,Logística,37,Femenino,1,9598.77,43.8,30.5,9,3,0
+EMP0726,Juan Herrera Flores,Ventas Técnicas,Ventas,36,Masculino,6,38217.35,33.6,8.4,10,3,0
+EMP0727,Monica Torres Alvarez,Almacén,Logística,38,Masculino,11,9950.05,19.5,22.3,16,3,0
+EMP0728,Guadalupe Medina Pérez,Almacén,Logística,48,Masculino,20,10808.89,24.1,6.6,11,3,0
+EMP0729,José Castillo Guzmán,Ventas Técnicas,Ventas,46,Masculino,19,29160.41,16.1,2.8,9,1,0
+EMP0730,Eduardo Mendoza Díaz,Ventas Técnicas,Ventas,38,Masculino,92,35436.19,27.5,7.5,10,5,0
+EMP0731,Arturo Morales Reyes,Almacén,Logística,30,Femenino,8,11616.49,28.6,1.6,12,2,0
+EMP0732,Alejandro González Díaz,Almacén,Logística,43,Femenino,17,11593.4,4.8,29.9,9,3,0
+EMP0733,Guadalupe Hernández Martínez,Ventas Técnicas,Ventas,43,Masculino,12,30562.21,6.6,11.2,6,3,0
+EMP0734,Ana Jiménez Flores,Almacén,Logística,48,Masculino,11,8990.77,38.6,6.8,14,3,0
+EMP0735,Adriana Sánchez García,Almacén,Logística,45,Masculino,8,11302.37,23.2,5.8,12,5,0
+EMP0736,Sofía Díaz Sánchez,Ventas Técnicas,Ventas,47,Femenino,66,42608.16,38.7,4.6,21,3,0
+EMP0737,Fernando Medina Ramírez,Almacén,Logística,52,Femenino,9,11212.3,47.4,29.6,10,3,0
+EMP0738,Alejandro Torres Alvarez,Almacén,Logística,29,Masculino,98,13234.4,48.7,26.6,11,3,0
+EMP0739,Leticia Alvarez García,Ventas Técnicas,Ventas,36,Masculino,5,25576.02,13.2,8.1,11,3,0
+EMP0740,Sofía Moreno Gómez,Ventas Técnicas,Ventas,33,Femenino,97,35311.31,16.1,9.0,10,4,0
+EMP0741,Jorge Sánchez Rodríguez,Ventas Técnicas,Ventas,26,Masculino,10,28896.33,8.4,6.3,11,3,0
+EMP0742,Guadalupe Hernández Vázquez,Almacén,Logística,42,Femenino,40,11022.54,27.4,31.5,11,3,0
+EMP0743,Miguel Martínez Díaz,Almacén,Logística,26,Femenino,21,12529.01,30.4,23.3,10,4,0
+EMP0744,Guadalupe Reyes Salazar,Almacén,Logística,27,Femenino,3,10015.06,33.6,77.9,18,4,1
+EMP0745,Francisco Mendoza Ramos,Almacén,Logística,42,Masculino,20,13529.89,18.4,64.9,14,3,1
+EMP0746,Ricardo Torres Ramos,Almacén,Logística,50,Masculino,21,10941.28,9.6,22.2,13,3,0
+EMP0747,María Moreno Salazar,Almacén,Logística,32,Femenino,9,11743.25,15.8,32.4,13,1,0
+EMP0748,Miguel Gómez Castillo,Almacén,Logística,31,Masculino,5,8000.0,12.3,12.5,11,3,0
+EMP0749,Pedro Sánchez López,Almacén,Logística,37,Masculino,1,10773.6,14.3,19.4,14,4,0
+EMP0750,Patricia López Vázquez,Almacén,Logística,30,Masculino,22,11367.44,49.5,21.7,16,3,0
+EMP0751,Leticia Castillo Gómez,Ventas Técnicas,Ventas,31,Masculino,40,29680.26,10.0,2.3,14,3,0
+EMP0752,Elena Ramos Ruiz,Almacén,Logística,45,Masculino,14,12966.74,33.5,29.4,15,3,0
+EMP0753,Adriana Jiménez Medina,Almacén,Logística,41,Femenino,44,12342.48,48.4,19.2,10,3,0
+EMP0754,Rosa Vargas Ortiz,Almacén,Logística,46,Masculino,44,11858.67,26.9,39.4,16,4,0
+EMP0755,Arturo Pérez Medina,Almacén,Logística,36,Femenino,54,10486.78,10.1,20.7,12,4,0
+EMP0756,Pedro Ortiz Medina,Almacén,Logística,44,Femenino,7,10835.2,20.0,42.1,13,3,0
+EMP0757,Carmen Guzmán Vargas,Almacén,Logística,50,Femenino,10,10644.86,32.3,14.4,12,3,0
+EMP0758,Luis Reyes Vázquez,Almacén,Logística,37,Masculino,11,10510.2,11.1,10.1,8,4,0
+EMP0759,Daniel Ramos Gómez,Almacén,Logística,35,Masculino,3,11243.57,8.8,35.4,18,3,0
+EMP0760,Luis Salazar Alvarez,Ventas Técnicas,Ventas,52,Masculino,46,35881.14,9.8,9.9,14,3,0
+EMP0761,María Rodríguez Castro,Almacén,Logística,42,Masculino,8,11612.0,15.6,10.6,10,3,0
+EMP0762,Rosa Mendoza Reyes,Almacén,Logística,28,Femenino,7,10367.96,29.9,30.9,14,3,0
+EMP0763,Laura Alvarez Ruiz,Almacén,Logística,45,Masculino,93,12256.81,5.0,28.2,17,4,0
+EMP0764,Ana Martínez Flores,Ventas Técnicas,Ventas,55,Femenino,64,29206.02,10.9,13.8,17,1,0
+EMP0765,Silvia Reyes Vázquez,Ventas Técnicas,Ventas,26,Masculino,14,24439.97,9.0,7.0,14,3,0
+EMP0766,María Ortiz Pérez,Almacén,Logística,52,Masculino,8,13588.54,23.4,22.8,6,3,0
+EMP0767,Jorge Alvarez Jiménez,Ventas Técnicas,Ventas,37,Masculino,23,35250.44,15.2,4.4,12,3,0
+EMP0768,Luis Mendoza Reyes,Almacén,Logística,32,Masculino,29,11264.73,27.6,42.0,10,3,1
+EMP0769,Fernando Vargas Rodríguez,Almacén,Logística,39,Masculino,45,10852.5,23.0,19.6,10,3,0
+EMP0770,Fernando López Reyes,Ventas Técnicas,Ventas,28,Masculino,2,35049.4,13.0,20.4,7,3,0
+EMP0771,Elena Vázquez Alvarez,Almacén,Logística,46,Femenino,3,12973.83,26.2,63.6,12,3,1
+EMP0772,Carlos Ruiz Vázquez,Almacén,Logística,25,Masculino,2,8700.97,11.4,16.4,8,4,0
+EMP0773,Guadalupe Vargas Torres,Ventas Técnicas,Ventas,29,Femenino,16,27522.27,25.4,3.9,15,3,0
+EMP0774,Leticia García Díaz,Ventas Técnicas,Ventas,36,Masculino,13,29190.35,4.7,3.7,14,4,0
+EMP0775,Sofía Castro García,Ventas Técnicas,Ventas,29,Masculino,41,34529.37,6.5,13.8,14,3,0
+EMP0776,Leticia Pérez Alvarez,Almacén,Logística,33,Masculino,41,8640.52,12.0,12.8,7,3,0
+EMP0777,Luis Rodríguez Morales,Almacén,Logística,51,Masculino,1,10454.66,18.0,24.6,10,3,0
+EMP0778,Gabriela Ramos González,Almacén,Logística,44,Femenino,23,9030.55,26.8,18.9,12,4,0
+EMP0779,Rosa Rodríguez Salazar,Ventas Técnicas,Ventas,39,Masculino,51,28666.86,4.0,9.9,10,1,0
+EMP0780,Francisco González Salazar,Almacén,Logística,41,Masculino,46,13778.06,17.5,20.8,19,3,0
+EMP0781,Patricia Rodríguez Torres,Almacén,Logística,36,Masculino,1,9318.2,34.7,18.3,10,3,1
+EMP0782,Elena Martínez Medina,Almacén,Logística,53,Femenino,18,12625.37,18.4,9.3,12,4,0
+EMP0783,Ana Medina Moreno,Ventas Técnicas,Ventas,42,Masculino,49,33471.96,6.6,4.3,10,2,0
+EMP0784,Leticia Moreno Morales,Almacén,Logística,31,Femenino,8,10678.19,1.1,15.9,15,3,0
+EMP0785,Gabriela Mendoza Díaz,Almacén,Logística,28,Femenino,102,10201.05,16.7,33.9,12,3,0
+EMP0786,Fernando Guzmán Salazar,Ventas Técnicas,Ventas,41,Femenino,1,37158.27,4.8,1.9,15,1,0
+EMP0787,Adriana Díaz Díaz,Almacén,Logística,32,Femenino,4,12331.07,45.5,24.7,8,4,0
+EMP0788,Luis Ortiz Ortiz,Almacén,Logística,54,Masculino,89,10629.0,26.1,34.0,8,4,0
+EMP0789,Silvia Ruiz López,Almacén,Logística,37,Masculino,160,10009.96,46.7,9.9,12,2,0
+EMP0790,Eduardo Guzmán Gómez,Almacén,Logística,36,Masculino,1,11176.56,7.8,26.8,18,3,0
+EMP0791,María Martínez Ruiz,Almacén,Logística,44,Femenino,7,8404.24,26.7,15.5,15,5,0
+EMP0792,Javier Reyes López,Almacén,Logística,27,Masculino,53,12215.04,14.7,38.5,10,3,0
+EMP0793,Leticia Sánchez Castro,Almacén,Logística,41,Femenino,7,13449.84,43.5,24.9,15,3,0
+EMP0794,Juan Medina García,Almacén,Logística,28,Femenino,120,10564.34,27.5,30.5,10,2,0
+EMP0795,Miguel Vázquez Ortiz,Almacén,Logística,46,Masculino,14,11445.12,23.3,26.9,12,3,0
+EMP0796,Leticia Ruiz Morales,Ventas Técnicas,Ventas,28,Masculino,57,28810.96,20.5,7.2,8,3,0
+EMP0797,Rosa Díaz Castro,Almacén,Logística,30,Masculino,28,13130.57,13.8,56.6,19,3,0
+EMP0798,Pedro Sánchez Vázquez,Ventas Técnicas,Ventas,45,Femenino,7,22386.14,23.9,2.4,14,2,0
+EMP0799,Gabriela López Ramírez,Almacén,Logística,41,Femenino,54,9476.06,18.0,22.7,18,3,0
+EMP0800,Laura Salazar Mendoza,Almacén,Logística,51,Masculino,4,12116.88,7.8,18.9,13,2,0
+EMP0801,Leticia Medina Hernández,Almacén,Logística,59,Masculino,55,10670.46,18.5,17.2,5,3,0
+EMP0802,Carlos Vargas Ortiz,Almacén,Logística,31,Masculino,13,10510.03,23.0,7.6,14,3,0
+EMP0803,Elena Castillo Medina,Almacén,Logística,33,Masculino,41,12145.16,38.4,53.9,12,3,0
+EMP0804,Adriana Mendoza Mendoza,Ventas Técnicas,Ventas,27,Femenino,42,41512.79,12.6,3.4,13,3,0
+EMP0805,Juan Sánchez Pérez,Almacén,Logística,49,Masculino,62,8158.43,30.1,6.6,16,4,0
+EMP0806,Luis Hernández Castillo,Ventas Técnicas,Ventas,52,Femenino,16,29254.21,9.2,1.6,13,4,0
+EMP0807,Carlos Vázquez Castillo,Almacén,Logística,40,Masculino,44,11669.02,25.6,22.4,9,3,0
+EMP0808,Guadalupe Ramos Guzmán,Almacén,Logística,23,Masculino,60,11813.3,25.6,37.9,17,3,1
+EMP0809,Carlos Sánchez Herrera,Almacén,Logística,31,Femenino,25,10423.51,16.7,35.0,12,3,0
+EMP0810,Carlos Díaz Vázquez,Almacén,Logística,35,Masculino,18,13018.9,23.8,54.0,9,3,1
+EMP0811,Pedro Ruiz Pérez,Almacén,Logística,43,Femenino,22,11763.54,38.1,21.7,13,3,0
+EMP0812,Ricardo Guzmán Medina,Almacén,Logística,39,Masculino,38,8915.33,44.0,19.1,8,4,0
+EMP0813,Carlos López Reyes,Almacén,Logística,33,Femenino,27,9583.81,32.6,26.5,10,3,0
+EMP0814,Miguel Sánchez Castro,Almacén,Logística,36,Masculino,12,11481.4,16.5,16.3,12,2,0
+EMP0815,Adriana Herrera Alvarez,Almacén,Logística,39,Masculino,3,11688.77,18.8,46.7,9,3,1
+EMP0816,Alejandro Alvarez Castillo,Almacén,Logística,22,Masculino,4,10963.57,33.6,63.9,11,4,1
+EMP0817,Ricardo Ortiz Castro,Ventas Técnicas,Ventas,36,Femenino,59,36457.61,11.4,6.3,11,3,0
+EMP0818,Alejandro Sánchez Torres,Almacén,Logística,46,Femenino,25,10916.22,16.6,75.4,7,3,1
+EMP0819,Francisco López Ortiz,Almacén,Logística,35,Masculino,22,11062.63,11.3,19.9,14,3,0
+EMP0820,Daniel Sánchez Morales,Ventas Técnicas,Ventas,33,Masculino,31,39509.76,25.7,6.9,7,3,0
+EMP0821,Miguel Ramírez Rodríguez,Almacén,Logística,48,Masculino,8,11265.33,26.3,17.4,8,3,0
+EMP0822,Rosa Alvarez Mendoza,Ventas Técnicas,Ventas,29,Masculino,47,28466.47,15.3,7.4,15,3,0
+EMP0823,Leticia Salazar Martínez,Almacén,Logística,26,Masculino,35,13715.45,26.9,17.5,10,3,0
+EMP0824,Eduardo Ortiz Morales,Almacén,Logística,38,Femenino,45,9807.66,35.2,19.0,9,3,0
+EMP0825,Rosa Jiménez Rodríguez,Almacén,Logística,53,Masculino,6,11990.63,20.4,25.9,6,3,0
+EMP0826,Gabriela Moreno Ortiz,Almacén,Logística,51,Femenino,52,14955.0,21.6,17.9,11,3,0
+EMP0827,Javier Vargas Reyes,Almacén,Logística,26,Femenino,77,14484.9,18.0,13.9,11,4,0
+EMP0828,Alejandro Ramos Morales,Ventas Técnicas,Ventas,27,Masculino,17,22339.67,15.4,3.0,14,5,0
+EMP0829,Elena López Torres,Almacén,Logística,33,Femenino,2,10696.22,24.1,40.0,10,2,1
+EMP0830,Javier Martínez Medina,Almacén,Logística,37,Femenino,20,9580.26,31.5,13.8,9,3,0
+EMP0831,Rosa Jiménez Sánchez,Almacén,Logística,48,Masculino,38,9759.53,23.9,32.6,11,4,0
+EMP0832,Silvia Sánchez Torres,Almacén,Logística,37,Masculino,5,10183.56,29.0,29.5,18,3,0
+EMP0833,Silvia Ramos López,Almacén,Logística,41,Femenino,4,10615.76,40.1,18.4,13,4,0
+EMP0834,Monica Vázquez Salazar,Almacén,Logística,47,Femenino,1,12895.78,38.2,19.6,13,4,0
+EMP0835,Carlos Ruiz Morales,Ventas Técnicas,Ventas,35,Masculino,180,25359.9,13.1,11.3,14,4,0
+EMP0836,Elena Ruiz Reyes,Ventas Técnicas,Ventas,29,Femenino,5,35161.08,38.8,11.6,15,3,0
+EMP0837,Ana Díaz Sánchez,Ventas Técnicas,Ventas,36,Masculino,6,28185.72,9.7,11.8,8,4,0
+EMP0838,Sofía Pérez Flores,Almacén,Logística,31,Masculino,84,8660.85,28.8,40.3,13,3,0
+EMP0839,Eduardo González Salazar,Ventas Técnicas,Ventas,32,Femenino,46,29629.84,22.3,4.6,10,3,0
+EMP0840,Fernando Guzmán Gómez,Almacén,Logística,32,Masculino,36,14278.6,29.4,32.0,14,3,0
+EMP0841,Luis Ruiz Herrera,Almacén,Logística,57,Masculino,40,8546.48,19.1,25.6,18,3,0
+EMP0842,Arturo Pérez Rodríguez,Ventas Técnicas,Ventas,33,Masculino,49,30000.87,47.9,14.3,11,2,0
+EMP0843,Sofía Díaz Ortiz,Almacén,Logística,33,Masculino,9,12553.6,31.8,9.6,7,2,0
+EMP0844,Carmen Castillo Rodríguez,Almacén,Logística,38,Masculino,11,12586.7,36.0,17.4,12,3,0
+EMP0845,Silvia González Pérez,Almacén,Logística,37,Masculino,12,14000.16,14.2,38.6,14,3,0
+EMP0846,Monica Medina Alvarez,Almacén,Logística,34,Femenino,16,14285.63,27.7,52.5,5,3,0
+EMP0847,Leticia Ortiz Ruiz,Almacén,Logística,26,Masculino,25,9553.33,21.4,39.7,16,2,0
+EMP0848,Laura Jiménez Pérez,Almacén,Logística,34,Masculino,26,12153.7,44.5,33.2,16,5,0
+EMP0849,Silvia Salazar Flores,Almacén,Logística,53,Masculino,3,12181.9,27.7,27.5,16,3,0
+EMP0850,Miguel Salazar García,Ventas Técnicas,Ventas,49,Femenino,113,35562.41,10.8,18.2,12,3,0
+EMP0851,Laura Salazar Pérez,Almacén,Logística,49,Masculino,49,11564.53,16.8,9.4,14,3,0
+EMP0852,Leticia Hernández Herrera,Almacén,Logística,35,Masculino,7,10164.92,29.9,12.5,9,4,0
+EMP0853,Ricardo Jiménez Salazar,Almacén,Logística,47,Femenino,24,10115.83,27.1,29.1,17,2,0
+EMP0854,Pedro Ramos Castillo,Ventas Técnicas,Ventas,31,Masculino,29,19796.48,23.2,10.3,12,3,0
+EMP0855,Jorge Pérez Díaz,Almacén,Logística,33,Masculino,14,10899.04,29.0,15.2,17,4,1
+EMP0856,Adriana Sánchez Ruiz,Ventas Técnicas,Ventas,25,Masculino,67,36478.98,17.3,8.2,13,4,0
+EMP0857,Alejandro Medina Torres,Ventas Técnicas,Ventas,37,Masculino,18,26217.94,46.7,6.1,7,3,0
+EMP0858,Javier Vázquez Ruiz,Almacén,Logística,26,Femenino,72,12509.62,15.4,17.5,13,3,0
+EMP0859,Eduardo Gómez Torres,Almacén,Logística,52,Masculino,9,10348.95,47.1,15.9,9,2,0
+EMP0860,Sofía Gómez Reyes,Almacén,Logística,29,Femenino,65,10881.82,49.1,23.0,11,5,0
+EMP0861,Francisco Jiménez Vázquez,Almacén,Logística,38,Masculino,30,14061.79,28.0,7.7,8,3,0
+EMP0862,María Vargas Herrera,Almacén,Logística,30,Femenino,22,11680.86,26.1,36.2,11,3,0
+EMP0863,Patricia Medina Castro,Ventas Técnicas,Ventas,47,Masculino,43,24054.76,26.9,6.5,8,4,0
+EMP0864,Alejandro Salazar Pérez,Almacén,Logística,36,Masculino,19,13306.33,35.6,28.5,13,3,0
+EMP0865,Gabriela Flores Morales,Almacén,Logística,40,Masculino,7,9832.73,39.1,23.8,9,3,0
+EMP0866,Carlos Alvarez Guzmán,Almacén,Logística,33,Femenino,20,10167.09,15.0,78.1,9,1,1
+EMP0867,Pedro Herrera López,Ventas Técnicas,Ventas,43,Masculino,48,36260.87,13.4,4.6,10,3,0
+EMP0868,Juan Ramírez Ruiz,Ventas Técnicas,Ventas,27,Femenino,6,33158.65,6.7,0.7,7,4,0
+EMP0869,Adriana Alvarez Alvarez,Ventas Técnicas,Ventas,51,Masculino,129,30716.73,9.6,10.6,15,4,0
+EMP0870,Leticia Morales Torres,Almacén,Logística,38,Femenino,67,13074.79,12.8,35.6,12,4,0
+EMP0871,Ana Pérez Flores,Almacén,Logística,36,Femenino,8,10524.94,13.4,33.6,17,3,0
+EMP0872,Pedro Díaz Alvarez,Almacén,Logística,35,Femenino,61,11011.34,14.9,20.1,5,3,0
+EMP0873,Arturo Sánchez Jiménez,Almacén,Logística,44,Femenino,10,13649.69,28.0,31.6,10,3,0
+EMP0874,Rosa Moreno Ortiz,Almacén,Logística,54,Masculino,2,12822.0,23.9,56.5,13,3,1
+EMP0875,Alejandro Ramírez Medina,Ventas Técnicas,Ventas,32,Femenino,18,27361.16,14.2,3.4,13,3,0
+EMP0876,Arturo Jiménez Herrera,Ventas Técnicas,Ventas,31,Masculino,52,30953.12,26.7,0.9,9,3,0
+EMP0877,Eduardo Herrera Jiménez,Almacén,Logística,38,Masculino,47,12684.25,46.2,15.9,9,4,0
+EMP0878,Fernando Martínez Herrera,Almacén,Logística,27,Masculino,21,8754.15,31.4,8.1,15,4,0
+EMP0879,Monica Gómez Martínez,Almacén,Logística,38,Masculino,62,12370.91,18.3,41.6,11,4,0
+EMP0880,Ana Herrera Ruiz,Almacén,Logística,23,Masculino,1,13273.12,38.0,12.4,8,3,0
+EMP0881,Patricia Martínez Salazar,Almacén,Logística,48,Masculino,59,9088.08,46.3,15.9,10,3,1
+EMP0882,Francisco Ruiz Moreno,Ventas Técnicas,Ventas,48,Masculino,6,33234.53,6.1,4.5,9,3,0
+EMP0883,Carlos Reyes Rodríguez,Almacén,Logística,51,Masculino,41,9141.78,60.6,10.2,17,3,0
+EMP0884,Arturo Guzmán González,Almacén,Logística,24,Masculino,2,11577.45,32.5,43.5,17,4,0
+EMP0885,Arturo Ortiz Rodríguez,Almacén,Logística,31,Femenino,25,11519.08,11.4,26.8,13,3,0
+EMP0886,Ricardo García Morales,Ventas Técnicas,Ventas,36,Masculino,34,34552.68,15.0,7.5,17,3,0
+EMP0887,Ana Castro Moreno,Almacén,Logística,28,Femenino,19,11234.99,45.8,17.9,13,4,0
+EMP0888,Pedro González Ramos,Almacén,Logística,38,Femenino,36,11307.2,27.0,10.1,8,4,0
+EMP0889,Ana García Pérez,Ventas Técnicas,Ventas,47,Masculino,51,23469.68,12.2,4.8,11,3,0
+EMP0890,Daniel Vázquez Gómez,Almacén,Logística,34,Masculino,10,11310.71,19.4,13.0,14,4,0
+EMP0891,Carlos Castillo Moreno,Almacén,Logística,35,Femenino,32,8689.38,20.9,21.6,15,3,0
+EMP0892,Guadalupe Salazar Castillo,Almacén,Logística,44,Masculino,23,12457.12,10.2,62.0,18,4,0
+EMP0893,Adriana Jiménez Ortiz,Ventas Técnicas,Ventas,43,Masculino,7,23131.4,28.8,1.3,16,3,0
+EMP0894,Patricia García García,Almacén,Logística,44,Femenino,11,12775.32,11.1,18.9,9,1,0
+EMP0895,Rosa Ruiz Morales,Almacén,Logística,35,Femenino,13,9680.54,22.7,21.6,16,4,0
+EMP0896,Juan García Reyes,Ventas Técnicas,Ventas,40,Masculino,34,27920.45,6.0,3.2,5,3,0
+EMP0897,Leticia Ramírez Ruiz,Almacén,Logística,46,Masculino,38,12721.35,23.7,30.3,13,3,0
+EMP0898,Miguel García Reyes,Almacén,Logística,44,Femenino,27,11397.75,15.4,47.5,9,2,1
+EMP0899,Arturo Ramos Ortiz,Almacén,Logística,46,Masculino,12,13426.58,31.2,25.1,13,4,0
+EMP0900,Elena Vargas Salazar,Ventas Técnicas,Ventas,44,Femenino,8,31648.88,11.1,15.3,16,3,0
+EMP0901,José Hernández Salazar,Almacén,Logística,34,Femenino,18,12897.73,20.3,17.0,11,3,0
+EMP0902,María Reyes López,Ventas Técnicas,Ventas,31,Femenino,18,34356.96,26.6,1.9,12,3,0
+EMP0903,Pedro Pérez Castillo,Almacén,Logística,30,Masculino,63,11708.02,19.0,11.6,12,3,0
+EMP0904,Daniel Ramírez Castro,Almacén,Logística,37,Femenino,38,11508.14,20.6,39.0,9,3,0
+EMP0905,Gabriela Ramírez Vargas,Ventas Técnicas,Ventas,42,Masculino,68,30713.45,6.4,11.9,8,3,0
+EMP0906,Javier González Gómez,Almacén,Logística,28,Masculino,11,12101.16,8.6,15.6,21,4,1
+EMP0907,Javier Vázquez Alvarez,Almacén,Logística,52,Masculino,13,12309.14,49.1,18.8,12,1,0
+EMP0908,Pedro Ramos Sánchez,Almacén,Logística,35,Masculino,5,9322.21,30.2,28.6,20,3,0
+EMP0909,Miguel Ortiz Castro,Almacén,Logística,27,Masculino,22,8925.66,30.0,24.6,13,3,0
+EMP0910,Silvia González Moreno,Almacén,Logística,38,Femenino,26,10781.98,26.2,16.1,10,4,0
+EMP0911,Silvia Moreno Medina,Almacén,Logística,34,Masculino,6,11771.57,34.9,21.3,19,2,0
+EMP0912,Carlos González Díaz,Ventas Técnicas,Ventas,33,Femenino,1,35335.33,4.3,7.9,15,4,0
+EMP0913,Javier Díaz Ruiz,Almacén,Logística,30,Masculino,40,11344.34,25.7,24.6,18,4,0
+EMP0914,Patricia Rodríguez Moreno,Almacén,Logística,50,Masculino,18,10661.97,47.2,20.9,13,3,0
+EMP0915,Juan Ramos Martínez,Almacén,Logística,24,Masculino,52,8985.16,21.8,26.8,14,4,0
+EMP0916,Luis Jiménez Guzmán,Ventas Técnicas,Ventas,43,Masculino,35,34493.45,2.9,15.9,16,2,0
+EMP0917,Elena Moreno Vargas,Ventas Técnicas,Ventas,36,Femenino,16,31365.99,11.7,2.4,11,4,0
+EMP0918,Alejandro Alvarez Guzmán,Almacén,Logística,43,Masculino,23,9446.59,33.8,48.1,7,1,1
+EMP0919,María Mendoza Reyes,Ventas Técnicas,Ventas,29,Masculino,30,32577.27,13.1,9.9,10,3,0
+EMP0920,Adriana Rodríguez Sánchez,Almacén,Logística,35,Masculino,54,10709.99,34.0,22.3,11,4,0
+EMP0921,Laura Mendoza Guzmán,Ventas Técnicas,Ventas,30,Femenino,3,33215.57,4.5,17.4,9,2,0
+EMP0922,Jorge Mendoza Alvarez,Ventas Técnicas,Ventas,58,Masculino,18,27517.07,18.6,2.5,13,3,0
+EMP0923,Patricia Ramírez Rodríguez,Almacén,Logística,28,Femenino,16,12698.3,11.9,8.1,19,3,0
+EMP0924,Adriana González Ortiz,Ventas Técnicas,Ventas,37,Femenino,24,31344.44,9.2,9.4,12,4,0
+EMP0925,Adriana Ramírez Mendoza,Almacén,Logística,32,Masculino,13,12115.57,23.3,18.9,15,3,0
+EMP0926,Rosa Alvarez Ortiz,Almacén,Logística,41,Masculino,58,13298.57,27.2,28.3,22,4,0
+EMP0927,Carlos Martínez Salazar,Almacén,Logística,33,Masculino,58,12818.39,22.2,40.6,16,4,0
+EMP0928,Silvia Flores García,Almacén,Logística,35,Masculino,17,12022.45,22.2,39.1,13,4,1
+EMP0929,Laura Alvarez López,Almacén,Logística,27,Femenino,57,11897.23,8.7,18.5,16,1,0
+EMP0930,Ricardo Castro Ramos,Almacén,Logística,26,Masculino,43,10356.44,7.7,41.2,7,4,0
+EMP0931,Arturo Díaz Salazar,Almacén,Logística,39,Femenino,33,9931.7,16.3,23.9,12,3,0
+EMP0932,Luis Torres Martínez,Almacén,Logística,48,Masculino,48,9351.98,22.5,12.2,11,3,0
+EMP0933,Roberto Sánchez Alvarez,Almacén,Logística,24,Masculino,15,13351.33,19.6,30.4,10,4,0
+EMP0934,Arturo Guzmán Díaz,Ventas Técnicas,Ventas,37,Masculino,10,31553.98,31.3,12.8,10,3,0
+EMP0935,Guadalupe Mendoza Ruiz,Almacén,Logística,35,Femenino,16,10793.56,47.2,19.1,10,1,0
+EMP0936,Alejandro Díaz Medina,Ventas Técnicas,Ventas,33,Femenino,27,33236.36,22.0,4.5,10,4,0
+EMP0937,Leticia López Vargas,Almacén,Logística,23,Femenino,13,10382.81,16.3,41.2,9,3,0
+EMP0938,Jorge Herrera González,Almacén,Logística,31,Masculino,89,8705.34,14.9,24.5,14,3,0
+EMP0939,Daniel Herrera Gómez,Almacén,Logística,51,Femenino,10,10339.15,5.9,25.1,10,3,0
+EMP0940,Carlos Hernández Morales,Ventas Técnicas,Ventas,58,Femenino,15,26466.34,24.0,9.1,11,3,0
+EMP0941,Pedro Castro González,Almacén,Logística,41,Masculino,9,9903.69,18.1,88.7,11,3,1
+EMP0942,Alejandro Castillo Medina,Ventas Técnicas,Ventas,27,Masculino,38,30742.24,8.6,2.3,14,3,0
+EMP0943,Carmen Castillo Díaz,Almacén,Logística,31,Femenino,12,8283.47,16.0,19.8,4,2,0
+EMP0944,Ricardo Flores García,Almacén,Logística,47,Masculino,41,11596.46,17.0,10.6,12,2,0
+EMP0945,Eduardo Ramírez Vargas,Almacén,Logística,30,Femenino,17,8984.56,31.7,16.0,10,3,0
+EMP0946,Fernando Jiménez Sánchez,Almacén,Logística,41,Femenino,11,9934.98,48.4,33.0,13,3,0
+EMP0947,Gabriela Ruiz Díaz,Ventas Técnicas,Ventas,21,Femenino,36,31372.7,5.1,6.2,11,3,0
+EMP0948,Elena Martínez Ortiz,Almacén,Logística,57,Masculino,158,8695.2,26.1,17.9,19,2,1
+EMP0949,Roberto Ortiz Díaz,Ventas Técnicas,Ventas,36,Masculino,26,35573.72,8.0,8.6,10,4,0
+EMP0950,Luis Medina Castillo,Almacén,Logística,24,Masculino,19,11910.14,29.8,36.3,7,4,0
+EMP0951,Miguel Vargas Sánchez,Almacén,Logística,29,Masculino,1,12393.39,24.7,35.0,15,2,1
+EMP0952,Jorge González González,Almacén,Logística,33,Masculino,48,10502.2,25.6,28.1,7,1,0
+EMP0953,Sofía López Díaz,Ventas Técnicas,Ventas,39,Femenino,131,23739.28,6.7,5.1,16,3,0
+EMP0954,Jorge Vargas Moreno,Ventas Técnicas,Ventas,20,Masculino,24,38677.85,11.1,4.5,11,2,0
+EMP0955,Ana Herrera Díaz,Almacén,Logística,36,Masculino,13,10433.9,20.0,16.4,11,4,0
+EMP0956,Alejandro Gómez Hernández,Almacén,Logística,35,Femenino,17,11549.91,10.3,32.3,9,5,0
+EMP0957,Luis García Torres,Almacén,Logística,47,Masculino,1,10957.13,17.7,35.3,8,2,0
+EMP0958,Fernando Gómez Medina,Almacén,Logística,34,Femenino,3,13708.13,13.3,24.8,16,3,0
+EMP0959,Sofía Hernández López,Ventas Técnicas,Ventas,42,Masculino,151,36414.93,18.0,9.1,16,2,0
+EMP0960,Luis Martínez Morales,Almacén,Logística,35,Masculino,64,11172.27,19.1,19.5,10,3,0
+EMP0961,Fernando Ruiz Ruiz,Almacén,Logística,47,Masculino,18,10902.63,33.2,13.9,13,2,0
+EMP0962,Daniel Morales Hernández,Ventas Técnicas,Ventas,52,Femenino,4,32397.9,16.7,6.0,6,4,0
+EMP0963,Juan González Gómez,Almacén,Logística,51,Masculino,17,10778.28,36.7,24.0,16,3,0
+EMP0964,Rosa González Castillo,Almacén,Logística,46,Masculino,6,11388.4,20.2,16.7,13,3,0
+EMP0965,Carmen Vargas Flores,Ventas Técnicas,Ventas,32,Masculino,43,37218.57,14.4,11.5,9,3,0
+EMP0966,Silvia Díaz García,Almacén,Logística,35,Femenino,39,10347.13,19.7,15.3,8,3,0
+EMP0967,Miguel Morales Díaz,Almacén,Logística,43,Femenino,42,13066.32,22.5,27.9,15,3,1
+EMP0968,Ricardo González Herrera,Ventas Técnicas,Ventas,34,Femenino,13,26876.25,10.3,0.4,20,4,0
+EMP0969,Francisco Ruiz Mendoza,Almacén,Logística,37,Masculino,1,11676.46,43.6,22.6,13,3,0
+EMP0970,Pedro Alvarez Reyes,Almacén,Logística,30,Masculino,5,10392.96,26.3,43.4,14,3,0
+EMP0971,José Ortiz Díaz,Almacén,Logística,44,Femenino,11,11677.56,29.7,11.1,14,4,0
+EMP0972,José López Ramírez,Almacén,Logística,26,No binario,20,10547.63,29.4,35.1,11,5,0
+EMP0973,Miguel Ramírez Jiménez,Almacén,Logística,50,Masculino,10,14420.39,14.6,18.0,10,3,0
+EMP0974,Ana González Martínez,Ventas Técnicas,Ventas,47,Masculino,28,30321.11,14.1,8.7,14,1,0
+EMP0975,Elena Ramírez Morales,Almacén,Logística,30,Masculino,17,9297.51,21.6,8.6,6,2,0
+EMP0976,Miguel Jiménez Vargas,Ventas Técnicas,Ventas,39,Masculino,24,35765.95,8.4,1.8,15,3,0
+EMP0977,Luis Gómez Ramírez,Almacén,Logística,48,Masculino,2,10757.43,22.7,13.9,17,3,0
+EMP0978,Pedro Herrera Moreno,Almacén,Logística,42,Masculino,37,10943.65,24.6,77.7,13,3,1
+EMP0979,Patricia Castillo Castillo,Ventas Técnicas,Ventas,28,Femenino,11,26159.94,24.9,9.6,13,3,0
+EMP0980,Laura Vázquez Hernández,Ventas Técnicas,Ventas,36,Femenino,144,29450.53,10.0,4.0,8,4,0
+EMP0981,Ana Torres García,Ventas Técnicas,Ventas,32,Masculino,3,30891.52,3.7,9.7,7,3,0
+EMP0982,Javier Flores Castro,Ventas Técnicas,Ventas,44,Femenino,69,37617.14,19.7,20.8,10,3,0
+EMP0983,Carmen Díaz Vargas,Ventas Técnicas,Ventas,55,Femenino,16,32838.08,10.7,8.6,13,4,0
+EMP0984,Silvia Flores Vázquez,Almacén,Logística,51,Masculino,37,9459.12,8.3,56.8,9,3,1
+EMP0985,Alejandro Morales Castro,Almacén,Logística,43,Femenino,11,12463.82,8.7,32.9,13,3,0
+EMP0986,Arturo Guzmán Moreno,Ventas Técnicas,Ventas,38,Femenino,13,30491.01,20.4,8.6,20,3,0
+EMP0987,Carmen López Torres,Almacén,Logística,41,Femenino,13,12697.19,11.3,11.1,22,5,0
+EMP0988,Alejandro Castillo Ramos,Almacén,Logística,38,Masculino,7,10503.46,30.2,35.8,8,5,0
+EMP0989,Laura Jiménez Flores,Almacén,Logística,53,Femenino,13,13191.54,22.0,11.2,14,4,0
+EMP0990,José Díaz Flores,Almacén,Logística,44,Masculino,2,12734.87,29.0,12.8,10,3,0
+EMP0991,Miguel Herrera Ramos,Ventas Técnicas,Ventas,44,Femenino,5,39614.68,11.8,4.3,8,3,0
+EMP0992,Eduardo Jiménez Alvarez,Almacén,Logística,46,Masculino,2,11215.13,8.0,10.9,15,3,0
+EMP0993,Monica Sánchez Flores,Ventas Técnicas,Ventas,49,Masculino,12,32140.68,51.0,1.2,9,4,0
+EMP0994,Javier Ramírez Castro,Ventas Técnicas,Ventas,47,Femenino,53,30937.74,25.8,0.8,9,3,0
+EMP0995,Monica Díaz Gómez,Ventas Técnicas,Ventas,31,Masculino,156,30658.14,16.5,8.2,11,3,0
+EMP0996,María Salazar Alvarez,Ventas Técnicas,Ventas,46,Femenino,19,27219.32,4.3,11.8,13,5,0
+EMP0997,Laura Alvarez Ruiz,Almacén,Logística,32,Masculino,7,11996.08,16.6,23.5,10,4,0
+EMP0998,José Ortiz Medina,Ventas Técnicas,Ventas,45,Masculino,11,33027.43,10.2,4.0,10,4,0
+EMP0999,Rosa García Herrera,Ventas Técnicas,Ventas,44,No binario,11,28124.26,8.4,32.5,14,3,0
+EMP1000,Fernando Ramos Pérez,Almacén,Logística,33,Femenino,8,12581.93,9.4,15.8,16,2,0

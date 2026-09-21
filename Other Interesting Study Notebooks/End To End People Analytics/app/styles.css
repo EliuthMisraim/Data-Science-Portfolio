@@ -1,0 +1,145 @@
+/* Estilos Premium para People Analytics Dashboard */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+/* Aplicar tipografía a toda la app */
+html, body, [class*="css"], .stMarkdown {
+    font-family: 'Outfit', sans-serif !important;
+}
+
+/* Título Principal Premium con Degradado */
+.main-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #4E79A7 0%, #E15759 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+    text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #6C757D;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+/* Tarjetas con Efecto Glassmorphism */
+.metric-card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.04);
+    transition: all 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.metric-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.08);
+    border: 1px solid rgba(78, 121, 167, 0.2);
+}
+
+.metric-title {
+    font-size: 0.95rem;
+    color: #8C96A0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.metric-value {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #2F3E46;
+}
+
+.metric-delta {
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.delta-positive {
+    color: #59A14F;
+}
+
+.delta-negative {
+    color: #E15759;
+}
+
+/* Badges de Riesgo */
+.badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    display: inline-block;
+    text-align: center;
+}
+
+.badge-high {
+    background-color: #FFD2D2;
+    color: #D32F2F;
+    border: 1px solid #FFB2B2;
+}
+
+.badge-medium {
+    background-color: #FFEFA5;
+    color: #E65100;
+    border: 1px solid #FFD54F;
+}
+
+.badge-low {
+    background-color: #D2EBD4;
+    color: #2E7D32;
+    border: 1px solid #A5D6A7;
+}
+
+/* Contenedor de Recomendaciones */
+.rec-container {
+    background: #F8F9FA;
+    border-left: 4px solid #4E79A7;
+    border-radius: 4px 12px 12px 4px;
+    padding: 15px 20px;
+    margin-top: 15px;
+}
+
+.rec-title {
+    font-weight: 600;
+    color: #2F3E46;
+    margin-bottom: 5px;
+}
+
+.rec-body {
+    font-size: 0.95rem;
+    color: #4A5568;
+}
+
+/* Grid layout para KPI */
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+/* Modificar botones de Streamlit para verse más modernos */
+div.stButton > button {
+    background: linear-gradient(135deg, #4E79A7 0%, #355271 100%) !important;
+    color: white !important;
+    font-weight: 500 !important;
+    border-radius: 8px !important;
+    border: none !important;
+    padding: 10px 24px !important;
+    box-shadow: 0 4px 12px rgba(78, 121, 167, 0.2) !important;
+    transition: all 0.2s ease !important;
+}
+
+div.stButton > button:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 18px rgba(78, 121, 167, 0.3) !important;
+}
