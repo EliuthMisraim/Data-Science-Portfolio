@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tema 25 · Regresión Logística</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#070b16;
+  --bg-2:#0c1426;
+  --panel:#0f1a30;
+  --panel-2:#111f3a;
+  --border:#1d2c4d;
+  --border-soft:#16223d;
+  --cyan:#3fe7ff;
+  --purple:#b47bff;
+  --green:#4dffb4;
+  --amber:#ffcf6b;
+  --text:#dde6f7;
+  --text-dim:#8896b8;
+  --text-faint:#57638a;
+  --mono:'JetBrains Mono','Consolas','SFMono-Regular','Courier New',monospace;
+  --radius:2px;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*{box-sizing:border-box;}
+html{scroll-padding-top:env(safe-area-inset-top,0px);}
+html,body{height:100%;}
+body{
+  margin:0;
+  background:
+    radial-gradient(1100px 700px at 12% -8%, rgba(63,231,255,0.10), transparent 60%),
+    radial-gradient(900px 650px at 108% 8%, rgba(180,123,255,0.12), transparent 55%),
+    radial-gradient(700px 500px at 50% 115%, rgba(77,255,180,0.07), transparent 60%),
+    var(--bg);
+  color:var(--text);
+  font-family:var(--mono);
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ---------- scaffolding ---------- */
+#deck{
+  position:relative;
+  width:100%;
+  height:100%;
+}
+.slide{
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  padding:clamp(20px,4vw,56px) clamp(20px,7vw,96px);
+  padding-top:calc(clamp(20px,4vw,56px) + env(safe-area-inset-top,0px));
+  padding-bottom:calc(clamp(64px,8vw,96px) + env(safe-area-inset-bottom,0px));
+  opacity:0;
+  transform:translateY(14px);
+  pointer-events:none;
+  transition:opacity .38s ease, transform .38s ease;
+  overflow-y:auto;
+}
+.slide.active{
+  opacity:1;
+  transform:translateY(0);
+  pointer-events:auto;
+}
+.slide-inner{
+  max-width:1180px;
+  margin:0 auto;
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  flex:1;
+  min-height:0;
+  justify-content:center;
+  gap:clamp(14px,2.2vw,26px);
+}
+
+/* ---------- top chrome ---------- */
+#progress-track{
+  position:fixed;
+  top:env(safe-area-inset-top,0px);
+  left:0; right:0;
+  height:2px;
+  background:var(--border-soft);
+  z-index:50;
+}
+#progress-bar{
+  height:100%;
+  width:0%;
+  background:linear-gradient(90deg,var(--cyan),var(--purple));
+  transition:width .35s ease;
+}
+#tag{
+  position:fixed;
+  top:calc(env(safe-area-inset-top,0px) + 14px);
+  left:clamp(20px,7vw,96px);
+  font-size:11px;
+  letter-spacing:.14em;
+  color:var(--text-faint);
+  z-index:40;
+}
+#tag b{color:var(--cyan); font-weight:600;}
+
+/* ---------- bottom chrome ---------- */
+#nav{
+  position:fixed;
+  left:0; right:0;
+  bottom:env(safe-area-inset-bottom,0px);
+  height:64px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 clamp(20px,7vw,96px);
+  background:linear-gradient(0deg, rgba(7,11,22,0.92), rgba(7,11,22,0));
+  z-index:45;
+}
+.nav-btn{
+  width:38px; height:38px;
+  border-radius:50%;
+  border:1px solid var(--border);
+  background:var(--panel);
+  color:var(--text-dim);
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;
+  font-family:var(--mono);
+  font-size:16px;
+  transition:border-color .2s, color .2s, transform .15s;
+}
+.nav-btn:hover{border-color:var(--cyan); color:var(--cyan);}
+.nav-btn:active{transform:scale(.92);}
+.nav-btn:disabled{opacity:.25; cursor:default;}
+.nav-btn:disabled:hover{border-color:var(--border); color:var(--text-dim);}
+#counter{font-size:12px; color:var(--text-faint); letter-spacing:.05em; min-width:64px; text-align:center;}
+#dots{display:flex; gap:6px; flex-wrap:wrap; justify-content:center; max-width:40vw;}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--border);cursor:pointer;transition:background .2s, transform .2s;}
+.dot.active{background:var(--cyan); transform:scale(1.5);}
+.dot:hover{background:var(--purple);}
+@media (max-width:720px){ #dots{display:none;} }
+
+/* ---------- typography ---------- */
+.kicker{
+  font-size:11px;
+  letter-spacing:.16em;
+  color:var(--purple);
+  display:flex; align-items:center; gap:10px;
+}
+.kicker::before{content:'';width:22px;height:1px;background:var(--purple);display:inline-block;}
+h1{
+  font-size:clamp(30px,5.4vw,64px);
+  line-height:1.06;
+  margin:0;
+  font-weight:700;
+  letter-spacing:-.01em;
+}
+h2{
+  font-size:clamp(24px,3.6vw,42px);
+  line-height:1.12;
+  margin:0;
+  font-weight:700;
+  letter-spacing:-.01em;
+}
+.accent-cyan{color:var(--cyan);}
+.accent-purple{color:var(--purple);}
+.accent-green{color:var(--green);}
+.accent-amber{color:var(--amber);}
+p{color:var(--text-dim); line-height:1.6; margin:0; font-size:clamp(13.5px,1.35vw,16px);}
+p.lead{color:var(--text); font-size:clamp(15px,1.6vw,19px); line-height:1.55;}
+.mono-num{font-variant-numeric:tabular-nums;}
+small.foot{color:var(--text-faint); font-size:11.5px; letter-spacing:.02em;}
+
+/* ---------- reusable blocks ---------- */
+.grid2{display:grid; grid-template-columns:1.05fr .95fr; gap:clamp(20px,3vw,44px); align-items:center;}
+.grid2.reverse{grid-template-columns:.95fr 1.05fr;}
+@media (max-width:860px){ .grid2, .grid2.reverse{grid-template-columns:1fr; gap:20px;} }
+
+.panel{
+  background:linear-gradient(180deg, var(--panel), var(--panel-2));
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:clamp(16px,2vw,26px);
+  position:relative;
+}
+.panel::before{
+  content:'';
+  position:absolute; top:0; left:0; width:100%; height:2px;
+  background:linear-gradient(90deg,var(--cyan),var(--purple),var(--green));
+  opacity:.55;
+}
+
+.code{
+  font-family:var(--mono);
+  font-size:clamp(11.5px,1.15vw,13.5px);
+  line-height:1.65;
+  background:#080d1a;
+  border:1px solid var(--border-soft);
+  border-radius:var(--radius);
+  padding:16px 18px;
+  overflow-x:auto;
+  color:#a8b6d9;
+  white-space:pre;
+}
+.code .c1{color:var(--text-faint); font-style:italic;}
+.code .kw{color:var(--purple);}
+.code .fn{color:var(--cyan);}
+.code .str{color:var(--green);}
+.code .num{color:var(--amber);}
+
+.stat{
+  border-left:2px solid var(--cyan);
+  padding-left:14px;
+}
+.stat .n{font-size:clamp(26px,3.4vw,42px); font-weight:700; color:var(--text); line-height:1;}
+.stat .l{font-size:11px; color:var(--text-faint); letter-spacing:.06em; margin-top:6px;}
+
+.tag{
+  display:inline-flex; align-items:center; gap:6px;
+  font-size:11px; letter-spacing:.04em;
+  padding:4px 9px;
+  border:1px solid var(--border);
+  border-radius:20px;
+  color:var(--text-dim);
+}
+.tag .dot-sm{width:5px;height:5px;border-radius:50%;}
+
+table.tbl{border-collapse:collapse; width:100%; font-size:clamp(11.5px,1.1vw,13.5px);}
+table.tbl th{
+  text-align:left; color:var(--text-faint); font-weight:600; letter-spacing:.04em;
+  border-bottom:1px solid var(--border); padding:7px 10px; font-size:10.5px;
+}
+table.tbl td{padding:8px 10px; border-bottom:1px solid var(--border-soft); color:var(--text-dim);}
+table.tbl tr:last-child td{border-bottom:none;}
+table.tbl td.hi{color:var(--cyan); font-weight:600;}
+table.tbl td.ok{color:var(--green);}
+table.tbl td.bad{color:var(--amber);}
+
+ul.steps{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:11px;}
+ul.steps li{display:flex; gap:13px; align-items:flex-start;}
+ul.steps .idx{
+  font-size:11px; color:var(--bg); background:var(--cyan);
+  width:20px; height:20px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  flex-shrink:0; margin-top:2px; font-weight:700;
+}
+ul.steps span{color:var(--text-dim); font-size:clamp(13px,1.3vw,15px); line-height:1.5;}
+ul.steps b{color:var(--text); font-weight:600;}
+
+ul.plain{margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:9px;}
+ul.plain li{color:var(--text-dim); font-size:clamp(13px,1.3vw,15px); line-height:1.55; padding-left:16px; position:relative;}
+ul.plain li::before{content:'▸'; position:absolute; left:0; color:var(--purple);}
+
+.split3{display:grid; grid-template-columns:repeat(3,1fr); gap:14px;}
+@media (max-width:760px){.split3{grid-template-columns:1fr;}}
+
+.warn{
+  border:1px solid rgba(255,207,107,.35);
+  background:rgba(255,207,107,.06);
+  border-radius:var(--radius);
+  padding:12px 16px;
+  font-size:clamp(12.5px,1.2vw,14px);
+  color:#f0d9a0;
+  line-height:1.55;
+}
+.warn b{color:var(--amber);}
+
+/* ---------- title slide ---------- */
+.title-eyebrow{font-size:12px; letter-spacing:.2em; color:var(--text-faint); display:flex; align-items:center; gap:12px;}
+.title-eyebrow .rule{width:40px; height:1px; background:var(--border);}
+.title-meta{display:flex; gap:28px; flex-wrap:wrap; margin-top:6px;}
+.title-meta div{display:flex; flex-direction:column; gap:3px;}
+.title-meta .k{font-size:10px; color:var(--text-faint); letter-spacing:.08em;}
+.title-meta .v{font-size:13px; color:var(--text-dim);}
+
+/* ---------- closing ---------- */
+.big-quote{font-size:clamp(18px,2.4vw,26px); color:var(--text); line-height:1.5; font-weight:500;}
+
+svg{display:block; overflow:visible;}
+::-webkit-scrollbar{width:8px;}
+::-webkit-scrollbar-thumb{background:var(--border); border-radius:4px;}
+</style>
+</head>
+<body>
+
+<div id="progress-track"><div id="progress-bar"></div></div>
+<div id="tag">TEMA 25 <span style="color:var(--text-faint)">·</span> <b>REGRESIÓN LOGÍSTICA</b></div>
+
+<div id="deck">
+
+  <!-- 0 : PORTADA -->
+  <section class="slide">
+    <div class="slide-inner" style="gap:34px;">
+      <div class="title-eyebrow"><span class="rule"></span> CUADERNO DE ESTUDIO · MACHINE LEARNING</div>
+      <h1>Regresión Logística<br><span class="accent-cyan">&</span> Modelado de <span class="accent-green">Probabilidades</span></h1>
+      <p class="lead" style="max-width:640px;">Cómo convertir una combinación lineal de variables en una probabilidad,
+      cómo se entrena por máxima verosimilitud, y cómo evaluar y desplegar el clasificador con un pipeline reproducible.</p>
+      <div class="title-meta">
+        <div><span class="k">DATASET</span><span class="v">drugs.csv · 200 pacientes</span></div>
+        <div><span class="k">LIBRERÍA</span><span class="v">scikit-learn</span></div>
+        <div><span class="k">CASO</span><span class="v">Proveedor Nacional vs. Extranjero</span></div>
+        <div><span class="k">SLIDES</span><span class="v">15 secciones de repaso</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 1 : ROADMAP -->
+  <section class="slide">
+    <div class="slide-inner">
+      <div class="kicker">MAPA DEL CUADERNO</div>
+      <h2>Siete bloques, <span class="accent-cyan">una idea central</span></h2>
+      <div class="split3" style="margin-top:6px;">
+        <div class="panel">
+          <div class="tag"><span class="dot-sm" style="background:var(--cyan)"></span>01–02</div>
+          <p style="margin-top:12px; color:var(--text);">Fundamentos: sigmoide, odds y máxima verosimilitud.</p>
+        </div>
+        <div class="panel">
+          <div class="tag"><span class="dot-sm" style="background:var(--purple)"></span>03</div>
+          <p style="margin-top:12px; color:var(--text);">Diagnóstico: matriz de confusión, curva ROC y AUC.</p>
+        </div>
+        <div class="panel">
+          <div class="tag"><span class="dot-sm" style="background:var(--green)"></span>04</div>
+          <p style="margin-top:12px; color:var(--text);">Proyecto: clasificar el origen de un fármaco.</p>
+        </div>
+        <div class="panel">
+          <div class="tag"><span class="dot-sm" style="background:var(--amber)"></span>05</div>
+          <p style="margin-top:12px; color:var(--text);">Solvers: lbfgs, newton-cg, sag, saga — ¿importa cuál uso?</p>
+        </div>
+        <div class="panel">
+          <div class="tag"><span class="dot-sm" style="background:var(--cyan)"></span>06</div>
+          <p style="margin-top:12px; color:var(--text);">Nivel Pro: Pipeline + clase OOP lista para producción.</p>
+        </div>
+        <div class="panel">
+          <div class="tag"><span class="dot-sm" style="background:var(--purple)"></span>07</div>
+          <p style="margin-top:12px; color:var(--text);">Glosario, errores comunes y autoevaluación.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 : POR QUE NO UNA RECTA -->
+  <section class="slide">
+    <div class="slide-inner">
+      <div class="grid2">
+        <div>
+          <div class="kicker">01 · EL PROBLEMA</div>
+          <h2>Una recta no sabe<br>dónde <span class="accent-amber">detenerse</span></h2>
+          <p style="margin-top:16px;">Una regresión lineal predice valores entre $-\infty$ y $+\infty$. Pero una
+          probabilidad nunca puede ser menor a 0 ni mayor a 1 — necesitamos una función que <b style="color:var(--text)">comprima</b>
+          cualquier número real dentro de ese rango.</p>
+        </div>
+        <svg viewBox="0 0 380 240" width="100%" height="auto">
+          <line x1="20" y1="120" x2="360" y2="120" stroke="#1d2c4d" stroke-width="1"/>
+          <line x1="40" y1="20" x2="40" y2="220" stroke="#1d2c4d" stroke-width="1"/>
+          <line x1="40" y1="200" x2="340" y2="40" stroke="#ffcf6b" stroke-width="2" stroke-dasharray="5 5" opacity=".8"/>
+          <text x="300" y="55" fill="#ffcf6b" font-size="11" font-family="monospace">recta: sin límite</text>
+          <rect x="30" y="20" width="10" height="10" fill="#080d1a" stroke="#1d2c4d"/>
+          <text x="10" y="30" fill="#57638a" font-size="9" font-family="monospace">P&gt;1 ❌</text>
+          <rect x="30" y="200" width="10" height="10" fill="#080d1a" stroke="#1d2c4d"/>
+          <text x="6" y="215" fill="#57638a" font-size="9" font-family="monospace">P&lt;0 ❌</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 : SIGMOIDE -->
+  <section class="slide">
+    <div class="slide-inner">
+      <div class="grid2 reverse">
+        <svg viewBox="0 0 380 240" width="100%" height="auto">
+          <line x1="20" y1="120" x2="360" y2="120" stroke="#1d2c4d" stroke-width="1"/>
+          <line x1="190" y1="20" x2="190" y2="220" stroke="#1d2c4d" stroke-width="1"/>
+          <line x1="20" y1="60" x2="360" y2="60" stroke="#e74c3c" stroke-width="1" stroke-dasharray="3 5" opacity=".45"/>
+          <text x="300" y="52" fill="#ffcf6b" font-size="10" font-family="monospace">P=0.5</text>
+          <path d="M 30 205 C 110 205, 150 60, 190 60 C 230 60, 270 15, 350 15" fill="none" stroke="#3fe7ff" stroke-width="3"/>
+          <circle cx="190" cy="60" r="4.5" fill="#b47bff"/>
+          <text x="200" y="90" fill="#b47bff" font-size="10" font-family="monospace">z = 0</text>
+          <text x="12" y="235" fill="#57638a" font-size="10" font-family="monospace">z</text>
+          <text x="345" y="235" fill="#57638a" font-size="10" font-family="monospace">+∞</text>
+          <text x="12" y="12" fill="#57638a" font-size="10" font-family="monospace">P(z)</text>
+        </svg>
+        <div>
+          <div class="kicker">01 · LA SOLUCIÓN</div>
+          <h2>La función <span class="accent-cyan">Sigmoide</span></h2>
+          <div class="code" style="margin:16px 0;">S(z) = <span class="num">1</span> / (<span class="num">1</span> + e<span class="c1">^-z</span>)</div>
+          <ul class="plain">
+            <li>Actúa como un <b style="color:var(--text)">embudo</b>: cualquier z real cae siempre en (0, 1).</li>
+            <li>S(0) = 0.5 → el umbral estándar corresponde exactamente a z = 0.</li>
+            <li>Simetría: S(−z) = 1 − S(z).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 : ODDS -->
+  <section class="slide">
+    <div class="slide-inner">
+      <div class="kicker">01 · INTERPRETACIÓN</div>
+      <h2>De la probabilidad al <span class="accent-purple">log-odds</span></h2>
+      <p class="lead" style="max-width:720px;">Si despejamos z de la sigmoide obtenemos el <b style="color:var(--text)">logit</b>:
+      el modelo es lineal en el log-odds, no en la probabilidad.</p>
+      <div class="code" style="max-width:620px;">
+<span class="c1"># logit: el modelo SÍ es lineal aquí</span>
+ln( p / (<span class="num">1</span>-p) ) = β₀ + β₁X₁ + β₂X₂ + ... + βₙXₙ
+      </div>
+      <div class="split3" style="margin-top:4px;">
+        <div class="panel"><p style="color:var(--text); font-size:14px;"><span class="accent-cyan">Odds</span> = p / (1−p)<br><span style="color:var(--text-dim); font-size:12.5px;">p=0.8 → odds = 4 (4 a 1 a favor)</span></p></div>
+        <div class="panel"><p style="color:var(--text); font-size:14px;"><span class="accent-green">β &gt; 0</span><br><span style="color:var(--text-dim); font-size:12.5px;">e^β &gt; 1 → sube la probabilidad de clase positiva</span></p></div>
+        <div class="panel"><p style="color:var(--text); font-size:14px;"><span class="accent-amber">β &lt; 0</span><br><span style="color:var(--text-dim); font-size:12.5px;">e^β &lt; 1 → baja la probabilidad de clase positiva</span></p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 : MLE -->
+  <section class="slide">
+    <div class="slide-inner">
+      <div class="grid2">
+        <div>
+          <div class="kicker">01 · ENTRENAMIENTO</div>
+          <h2>Máxima <span class="accent-cyan">Verosimilitud</span>,<br>no mínimos cuadrados</h2>
+          <p style="margin-top:14px;">Se buscan los β que maximizan la probabilidad de haber observado las
+          etiquetas reales. No tiene solución cerrada: se resuelve con optimización numérica
+          (descenso de gradiente, Newton-Raphson…) — de ahí nacen los <span class="accent-purple">solvers</span> de la sección 5.</p>
+        </div>
+        <div class="panel">
+          <div class="code" style="background:transparent; border:none; padding:6px 0;">
+ℓ(β) = Σ [ yᵢ ln(pᵢ) + (1-yᵢ) ln(1-pᵢ) ]
+          </div>
+          <div class="warn" style="margin-top:14px;">
+            <b>Matiz clave:</b> scikit-learn no maximiza la verosimilitud pura — añade
+            regularización L2 (parámetro <code>C</code>). Por eso la escala de las variables sí importa.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 : MATRIZ CONFUSION -->
+  <section class="slide">
+    <div class="slide-inner">
+      <div class="kicker">02 · DIAGNÓSTICO</div>
+      <h2>La matriz de <span class="accent-cyan">confusión</span></h2>
+      <div class="grid2" style="margin-top:6px;">
+        <table class="tbl">
+          <tr><th></th><th>Predicho: Positivo</th><th>Predicho: Negativo</th></tr>
+          <tr><td style="color:var(--text-faint)">Real: Positivo</td><td class="ok">VP</td><td class="bad">FN</td></tr>
+          <tr><td style="color:var(--text-faint)">Real: Negativo</td><td class="bad">FP</td><td class="ok">VN</td></tr>
+        </table>
+        <ul class="plain">
+          <li><b style="color:var(--text);">TPR / Sensibilidad</b> = VP / (VP + FN) → % de positivos reales atrapados.</li>
+          <li><b style="color:var(--text);">FPR</b> = FP / (FP + VN) → % de falsas alarmas sobre negativos reales.</li>
+          <li>Cada punto de la curva ROC es <b style="color:var(--text);">un umbral distinto</b>.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 : ROC / AUC -->
+  <section class="slide">
+    <div class="slide-inner">
+      <div class="grid2 reverse">
+        <svg viewBox="0 0 260 240" width="100%" height="auto">
+          <line x1="30" y1="210" x2="230" y2="210" stroke="#1d2c4d"/>
+          <line x1="30" y1="20" x2="30" y2="210" stroke="#1d2c4d"/>
+          <line x1="30" y1="210" x2="230" y2="20" stroke="#57638a" stroke-width="1" stroke-dasharray="4 5"/>
+          <path d="M 30 210 C 60 90, 90 35, 230 20" fill="none" stroke="#4dffb4" stroke-width="3"/>
+          <path d="M 30 210 L 30 20 L 230 20" fill="none" stroke="#1d2c4d" stroke-width="1" stroke-dasharray="2 4" opacity=".5"/>
+          <text x="120" y="230" fill="#57638a" font-size="10" font-family="monospace">FPR</text>
+          <text x="4" y="15" fill="#57638a" font-size="10" font-family="monospace">TPR</text>
+          <text x="150" y="60" fill="#4dffb4" font-size="10" font-family="monospace">AUC≈0.95</text>
+        </svg>
+        <div>
+          <div class="kicker">02 · MÉTRICA RESUMEN</div>
+          <h2>Curva ROC y <span class="accent-green">AUC</span></h2>
+          <ul class="plain" style="margin-top:16px;">
+            <li><b style="color:var(--text);">AUC = 1.0</b> → separación perfecta entre clases.</li>
+            <li><b style="color:var(--text);">AUC = 0.5</b> → equivale a lanzar una moneda (la diagonal).</li>
+            <li>Interpretación probabilística: P(score del positivo &gt; score del negativo), elegidos al azar.</li>
+            <li style="color:var(--amber);">Mide qué tan bien <i>ordena</i> el modelo — no si la probabilidad está bien calibrada.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 : PROYECTO -->
+  <section class="slide">
+    <div class="slide-inner">
+      <div class="kicker">04 · PROYECTO PRÁCTICO</div>
+      <h2>¿De dónde viene <span class="accent-cyan">el fármaco</span>?</h2>
+      <p class="lead" style="max-width:680px; margin-top:6px;">200 pacientes, 5 variables clínicas.
+      Reagrupamos 5 fármacos en 2 clases de negocio: proveedor Nacional vs. Extranjero.</p>
+      <div class="split3" style="margin-top:14px;">
+        <div class="stat"><div class="n accent-green">145</div><div class="l">EXTRANJERO (drugX, DrugY) · 72.5%</div></div>
+        <div class="stat" style="border-color:var(--purple);"><div class="n accent-purple">55</div><div class="l">NACIONAL (drugA, B, C) · 27.5%</div></div>
+        <div class="stat" style="border-color:var(--amber);"><div class="n accent-amber">72.5%</div><div class="l">LÍNEA BASE · siempre predecir "Extranjero"</div></div>
+      </div>
+      <div class="warn" style="margin-top:6px; max-width:760px;">
+        <b>Clases desbalanceadas:</b> cualquier modelo debe superar claramente el 72.5% de accuracy —
+        por eso también miramos precision, recall, F1 y AUC, no solo accuracy.
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 : MAPEO / TRAMPAS -->
+  <section class="slide">
+    <div class="slide-inner">
+      <div class="kicker">04 · PREPROCESAMIENTO</div>
+      <h2>La trampa del <span class="accent-amber">else silencioso</span></h2>
+      <div class="grid2" style="margin-top:6px;">
+        <div class="panel" style="border-color:rgba(255,207,107,.35);">
+          <div class="tag" style="border-color:rgba(255,207,107,.4); color:var(--amber);">❌ frágil</div>
+          <div class="code" style="margin-top:12px;">
+<span class="kw">def</span> <span class="fn">transformar</span>(nombre):
+    <span class="kw">if</span> nombre <span class="kw">in</span> [<span class="str">'drugA'</span>,<span class="str">'drugB'</span>,<span class="str">'drugC'</span>]:
+        <span class="kw">return</span> <span class="num">1</span>
+    <span class="kw">else</span>:
+        <span class="kw">return</span> <span class="num">0</span>  <span class="c1"># ¡cualquier cosa cae aquí!</span>
+          </div>
+        </div>
+        <div class="panel" style="border-color:rgba(77,255,180,.35);">
+          <div class="tag" style="border-color:rgba(77,255,180,.4); color:var(--green);">✓ explícito</div>
+          <div class="code" style="margin-top:12px;">
+MAPA = {<span class="str">'druga'</span>:<span class="num">1</span>, <span class="str">'drugb'</span>:<span class="num">1</span>, <span class="str">'drugc'</span>:<span class="num">1</span>,
+        <span class="str">'drugx'</span>:<span class="num">0</span>, <span class="str">'drugy'</span>:<span class="num">0</span>}
+y = nombre.str.lower().<span class="fn">map</span>(MAPA)
+<span class="kw">assert</span> y.isna().<span class="fn">sum</span>() == <span class="num">0</span>
+          </div>
+        </div>
+      </div>
+      <p style="margin-top:4px;">El CSV real mezcla mayúsculas (<code style="color:var(--cyan)">DrugY</code> vs
+      <code style="color:var(--cyan)">drugX</code>). Un mapeo con <code style="color:var(--amber)">else</code> oculta
+      cualquier fármaco mal escrito clasificándolo como Extranjero, sin avisar.</p>
+    </div>
+  </section>
+
+  <!-- 10 : LABELENCODER -->
+  <section class="slide">
+    <div class="slide-inner">
+      <div class="kicker">06 · CODIFICACIÓN CATEGÓRICA</div>
+      <h2>El experimento que <span class="accent-purple">cambia todo</span></h2>
+      <p style="max-width:760px;">Comparamos 3 formas de codificar <code style="color:var(--cyan)">BP</code> con validación cruzada de 5 pliegues:</p>
+      <table class="tbl" style="margin-top:8px;">
+        <tr><th>Codificación</th><th>Lógica</th><th>Accuracy (CV)</th><th>AUC (CV)</th></tr>
+        <tr><td>A) Alfabético (=LabelEncoder)</td><td>HIGH=0, LOW=1, NORMAL=2</td><td class="hi">0.955</td><td class="hi">0.988</td></tr>
+        <tr><td>B) Orden clínico</td><td>LOW=0, NORMAL=1, HIGH=2</td><td class="bad">0.800</td><td class="bad">0.860</td></tr>
+        <tr><td>C) One-Hot</td><td>una columna binaria por categoría</td><td class="ok">0.955</td><td class="ok">0.988</td></tr>
+      </table>
+      <div class="warn" style="margin-top:10px; max-width:820px;">
+        <b>¿Por qué gana A "por casualidad"?</b> La relación de BP con el objetivo <b>no es monótona</b>:
+        NORMAL nunca es Nacional, pero HIGH y LOW sí pueden serlo. Un modelo lineal solo puede representar
+        un efecto monótono con un único coeficiente — el orden alfabético deja a NORMAL en un extremo por azar.
+        <b>One-Hot es la opción segura</b> para categorías sin orden real.
+      </div>
+    </div>
+  </section>
+
+  <!-- 11 : SPLIT / ESCALADO -->
+  <section class="slide">
+    <div class="slide-inner">
+      <div class="kicker">04–05 · PARTICIÓN Y ESCALADO</div>
+      <h2>Sin fuga de datos, <span class="accent-cyan">sin sorpresas</span></h2>
+      <div class="grid2" style="margin-top:6px;">
+        <ul class="steps">
+          <li><span class="idx">1</span><span><b>train_test_split</b> con <code style="color:var(--cyan)">stratify=y</code> → misma proporción de clases en ambos conjuntos.</span></li>
+          <li><span class="idx">2</span><span><b>StandardScaler.fit_transform</b> solo en train.</span></li>
+          <li><span class="idx">3</span><span><b>StandardScaler.transform</b> (sin fit) en test → evita fuga de datos.</span></li>
+        </ul>
+        <div class="panel">
+          <p style="color:var(--text); font-size:13.5px; margin-bottom:10px;">Iteraciones con max_iter=100 (límite por defecto):</p>
+          <table class="tbl">
+            <tr><th>Solver</th><th>Sin escalar</th><th>Escalado</th></tr>
+            <tr><td>lbfgs</td><td>48 iter</td><td class="ok">9 iter</td></tr>
+            <tr><td>newton-cg</td><td>22 iter</td><td class="ok">5 iter</td></tr>
+            <tr><td>sag</td><td class="bad">100 · no converge ⚠</td><td class="ok">22 iter</td></tr>
+            <tr><td>saga</td><td class="bad">100 · no converge ⚠</td><td class="ok">31 iter</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12 : SOLVERS -->
+  <section class="slide">
+    <div class="slide-inner">
+      <div class="kicker">05 · SOLUCIONADORES</div>
+      <h2>Cuatro caminos, <span class="accent-green">el mismo destino</span></h2>
+      <table class="tbl" style="margin-top:8px;">
+        <tr><th>Solver</th><th>Familia</th><th>Penalizaciones</th><th>Cuándo destaca</th></tr>
+        <tr><td class="hi">lbfgs</td><td>Cuasi-Newton</td><td>L2, ninguna</td><td>Estándar por defecto</td></tr>
+        <tr><td>newton-cg</td><td>Newton (2º orden)</td><td>L2, ninguna</td><td>Alta precisión, pocas variables</td></tr>
+        <tr><td>sag</td><td>Gradiente estocástico</td><td>L2, ninguna</td><td>Datasets masivos (escalado obligatorio)</td></tr>
+        <tr><td>saga</td><td>Gradiente estocástico</td><td>L1, L2, ElasticNet</td><td>Grandes + selección de variables</td></tr>
+      </table>
+      <p class="lead" style="margin-top:14px; max-width:760px;">
+        Con los 4 solvers: accuracy = <span class="accent-green">0.950</span>, AUC = <span class="accent-green">0.991</span> — idénticos.
+        La log-loss es <b style="color:var(--text);">convexa</b>: tiene un único mínimo global, así que un solver que converge
+        bien siempre llega al mismo modelo. Lo que cambia es <i>cómo</i> llega: velocidad, memoria, penalizaciones soportadas.
+      </p>
+    </div>
+  </section>
+
+  <!-- 13 : UMBRAL -->
+  <section class="slide">
+    <div class="slide-inner">
+      <div class="kicker">05 · DECISIÓN</div>
+      <h2>El umbral 0.5 es <span class="accent-amber">solo una convención</span></h2>
+      <div class="grid2" style="margin-top:4px;">
+        <table class="tbl">
+          <tr><th>Umbral</th><th>Precision</th><th>Recall</th><th>FN</th></tr>
+          <tr><td>0.2</td><td>0.611</td><td class="ok">1.000</td><td class="ok">0</td></tr>
+          <tr><td class="hi">0.5</td><td>0.909</td><td>0.909</td><td>1</td></tr>
+          <tr><td>0.8</td><td class="ok">1.000</td><td>0.727</td><td class="bad">3</td></tr>
+        </table>
+        <ul class="plain">
+          <li><b style="color:var(--text);">Bajar el umbral</b> → más recall, más falsos positivos.</li>
+          <li><b style="color:var(--text);">Subir el umbral</b> → más precision, se escapan positivos reales.</li>
+          <li>La elección depende del <b style="color:var(--text);">costo real de cada error</b> — en medicina o finanzas, no es simétrico.</li>
+          <li>Índice de Youden: umbral que maximiza (TPR − FPR).</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 14 : PIPELINE OOP -->
+  <section class="slide">
+    <div class="slide-inner">
+      <div class="kicker">06 · NIVEL PRO</div>
+      <h2>Un <span class="accent-cyan">Pipeline</span>, no pasos sueltos</h2>
+      <svg viewBox="0 0 760 110" width="100%" height="auto" style="margin:6px 0 4px;">
+        <g font-family="monospace" font-size="11" fill="#8896b8">
+          <rect x="10" y="30" width="140" height="50" rx="2" fill="#0f1a30" stroke="#1d2c4d"/>
+          <text x="80" y="50" text-anchor="middle" fill="#dde6f7">datos</text>
+          <text x="80" y="65" text-anchor="middle" fill="#57638a" font-size="9">crudos</text>
+
+          <line x1="150" y1="55" x2="190" y2="55" stroke="#3fe7ff" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+          <rect x="190" y="20" width="180" height="70" rx="2" fill="#0f1a30" stroke="#3fe7ff"/>
+          <text x="280" y="42" text-anchor="middle" fill="#3fe7ff">ColumnTransformer</text>
+          <text x="280" y="60" text-anchor="middle" fill="#57638a" font-size="9">StandardScaler (num)</text>
+          <text x="280" y="74" text-anchor="middle" fill="#57638a" font-size="9">OneHotEncoder (cat)</text>
+
+          <line x1="370" y1="55" x2="410" y2="55" stroke="#b47bff" stroke-width="1.5" marker-end="url(#arrow2)"/>
+
+          <rect x="410" y="30" width="160" height="50" rx="2" fill="#0f1a30" stroke="#b47bff"/>
+          <text x="490" y="50" text-anchor="middle" fill="#b47bff">LogisticRegression</text>
+          <text x="490" y="65" text-anchor="middle" fill="#57638a" font-size="9">clasificador</text>
+
+          <line x1="570" y1="55" x2="610" y2="55" stroke="#4dffb4" stroke-width="1.5" marker-end="url(#arrow3)"/>
+
+          <rect x="610" y="30" width="140" height="50" rx="2" fill="#0f1a30" stroke="#4dffb4"/>
+          <text x="680" y="50" text-anchor="middle" fill="#4dffb4">P(Nacional)</text>
+          <text x="680" y="65" text-anchor="middle" fill="#57638a" font-size="9">probabilidad</text>
+        </g>
+        <defs>
+          <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#3fe7ff"/></marker>
+          <marker id="arrow2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#b47bff"/></marker>
+          <marker id="arrow3" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#4dffb4"/></marker>
+        </defs>
+      </svg>
+      <p style="max-width:760px;">Encapsulado en una clase <code style="color:var(--cyan)">ClasificadorProveedorFarmacos</code>:
+      <code style="color:var(--text-dim)">cargar_datos → entrenar → evaluar / validar_cruzado → predecir_probabilidad(paciente_crudo)</code>.
+      El preprocesamiento se ajusta <b style="color:var(--text);">solo con train</b>, y se aplica igual a cualquier paciente nuevo.</p>
+      <div class="split3" style="margin-top:4px;">
+        <div class="stat"><div class="n accent-cyan">0.975</div><div class="l">ACCURACY EN TEST</div></div>
+        <div class="stat" style="border-color:var(--purple);"><div class="n accent-purple">0.994</div><div class="l">AUC EN TEST</div></div>
+        <div class="stat" style="border-color:var(--green);"><div class="n accent-green">0.989</div><div class="l">AUC · VALIDACIÓN CRUZADA</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 15 : ERRORES COMUNES -->
+  <section class="slide">
+    <div class="slide-inner">
+      <div class="kicker">07 · PARA NO OLVIDAR</div>
+      <h2>Errores <span class="accent-amber">comunes</span></h2>
+      <ul class="steps" style="margin-top:8px;">
+        <li><span class="idx" style="background:var(--amber); color:#1a1200;">1</span><span><b>LabelEncoder en predictoras</b> → impone un orden numérico arbitrario. Usa OneHotEncoder salvo que el orden sea real y monótono.</span></li>
+        <li><span class="idx" style="background:var(--amber); color:#1a1200;">2</span><span><b>Ajustar el scaler con todos los datos</b> → fuga de datos. Ajusta solo con train, o mejor, dentro de un Pipeline.</span></li>
+        <li><span class="idx" style="background:var(--amber); color:#1a1200;">3</span><span><b>Confiar solo en accuracy</b> con clases desbalanceadas → compara siempre contra la línea base.</span></li>
+        <li><span class="idx" style="background:var(--amber); color:#1a1200;">4</span><span><b>Aceptar el umbral 0.5 sin pensar</b> → depende del costo real de cada tipo de error.</span></li>
+        <li><span class="idx" style="background:var(--amber); color:#1a1200;">5</span><span><b>Ignorar un ConvergenceWarning</b> → el solver no llegó al óptimo: escala las variables o sube max_iter.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 16 : CIERRE -->
+  <section class="slide">
+    <div class="slide-inner" style="gap:26px;">
+      <div class="kicker">CIERRE</div>
+      <p class="big-quote">La regresión logística modela <span class="accent-cyan">probabilidades</span>, no clases:
+      la sigmoide comprime un log-odds lineal, la máxima verosimilitud lo entrena, y ROC/AUC + un buen
+      umbral deciden cuándo confiar en él.</p>
+      <div class="split3">
+        <div class="panel"><p style="color:var(--text); font-size:13.5px;">Repite el proyecto con <code style="color:var(--cyan)">C=0.01 / 1 / 100</code> y observa los coeficientes.</p></div>
+        <div class="panel"><p style="color:var(--text); font-size:13.5px;">Prueba <code style="color:var(--purple)">class_weight='balanced'</code> y compara precision/recall.</p></div>
+        <div class="panel"><p style="color:var(--text); font-size:13.5px;">Extiende a las 5 clases originales (regresión multinomial).</p></div>
+      </div>
+      <small class="foot">Tema 25 · Regresión Logística y Modelado de Probabilidades — repaso generado a partir del cuaderno de estudio.</small>
+    </div>
+  </section>
+
+</div>
+
+<div id="nav">
+  <button class="nav-btn" id="prev" aria-label="Anterior">‹</button>
+  <div style="display:flex; align-items:center; gap:16px;">
+    <span id="counter">01 / 17</span>
+    <div id="dots"></div>
+  </div>
+  <button class="nav-btn" id="next" aria-label="Siguiente">›</button>
+</div>
+
+<script>
+(function(){
+  var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
+  var total = slides.length;
+  var idx = 0;
+  var dotsWrap = document.getElementById('dots');
+  var counter = document.getElementById('counter');
+  var bar = document.getElementById('progress-bar');
+  var prevBtn = document.getElementById('prev');
+  var nextBtn = document.getElementById('next');
+
+  slides.forEach(function(_, i){
+    var d = document.createElement('div');
+    d.className = 'dot';
+    d.addEventListener('click', function(){ go(i); });
+    dotsWrap.appendChild(d);
+  });
+  var dots = Array.prototype.slice.call(dotsWrap.children);
+
+  function pad(n){ return (n+1) < 10 ? '0'+(n+1) : ''+(n+1); }
+
+  function render(){
+    slides.forEach(function(s, i){ s.classList.toggle('active', i === idx); });
+    dots.forEach(function(d, i){ d.classList.toggle('active', i === idx); });
+    counter.textContent = pad(idx) + ' / ' + pad(total-1);
+    bar.style.width = (total > 1 ? (idx/(total-1))*100 : 0) + '%';
+    prevBtn.disabled = idx === 0;
+    nextBtn.disabled = idx === total-1;
+    slides[idx].scrollTop = 0;
+  }
+
+  function go(i){
+    idx = Math.max(0, Math.min(total-1, i));
+    render();
+  }
+
+  prevBtn.addEventListener('click', function(){ go(idx-1); });
+  nextBtn.addEventListener('click', function(){ go(idx+1); });
+
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown'){ go(idx+1); e.preventDefault(); }
+    else if (e.key === 'ArrowLeft' || e.key === 'PageUp'){ go(idx-1); e.preventDefault(); }
+    else if (e.key === 'Home'){ go(0); }
+    else if (e.key === 'End'){ go(total-1); }
+  });
+
+  // swipe support
+  var touchX = null;
+  document.addEventListener('touchstart', function(e){ touchX = e.touches[0].clientX; }, {passive:true});
+  document.addEventListener('touchend', function(e){
+    if (touchX === null) return;
+    var dx = e.changedTouches[0].clientX - touchX;
+    if (Math.abs(dx) > 50){ dx < 0 ? go(idx+1) : go(idx-1); }
+    touchX = null;
+  }, {passive:true});
+
+  render();
+})();
+</script>
+</body>
+</html>
