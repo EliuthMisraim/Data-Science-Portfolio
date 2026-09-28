@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tema 26 · Clustering jerárquico y PCA</title>
+<style>
+:root{
+  --bg:#0a1128;--panel:#101a3a;--line:#25356b;--text:#dbe4ff;--dim:#8d9bc9;
+  --cyan:#22d3ee;--pur:#a78bfa;--grn:#4ade80;
+  --mono:Consolas,"Cascadia Code","SFMono-Regular","Courier New",monospace;
+  color-scheme:dark;box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);height:100%}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;height:100%;background:var(--bg);color:var(--text);font-family:var(--mono);font-size:16px;line-height:1.55}
+.deck{height:100%;display:flex;flex-direction:column}
+.stage{flex:1;min-height:0;position:relative}
+.slide{display:none;position:absolute;inset:0;overflow:auto;padding:clamp(18px,4vw,48px) clamp(18px,6vw,80px);flex-direction:column;justify-content:center;gap:22px}
+.slide.on{display:flex}
+h1{font-size:clamp(28px,5.2vw,58px);line-height:1.1;margin:0;font-weight:700;letter-spacing:-.02em}
+h2{font-size:clamp(22px,3.4vw,36px);line-height:1.2;margin:0;font-weight:700}
+h2 i{font-style:normal;color:var(--cyan);margin-right:.5ch}
+p{margin:0;max-width:74ch}
+.dim{color:var(--dim)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}
+@media(max-width:760px){.grid{grid-template-columns:1fr}}
+.code{background:var(--panel);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.code .bar{display:flex;align-items:center;gap:6px;padding:8px 12px;border-bottom:1px solid var(--line);color:var(--dim);font-size:13px}
+.code .bar b{width:9px;height:9px;border-radius:50%;background:var(--line)}
+.code .bar b:nth-child(1){background:var(--cyan)}.code .bar b:nth-child(2){background:var(--pur)}.code .bar b:nth-child(3){background:var(--grn)}
+.code .bar span{margin-left:8px}
+.code .body{padding:14px 16px}
+.c{color:var(--dim)}.k{color:var(--pur)}.n{color:var(--cyan)}.g{color:var(--grn)}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{border:1px solid var(--line);border-radius:4px;padding:5px 12px;background:var(--panel)}
+.chip b{color:var(--cyan)}
+.row{display:grid;grid-template-columns:118px 1fr 52px;gap:10px;align-items:center;font-size:14px;margin:6px 0}
+.track{height:12px;background:#0d1733;border-radius:2px;overflow:hidden}
+.fill{height:100%;background:var(--cyan)}
+.big{font-size:clamp(44px,8vw,84px);font-weight:700;line-height:1;color:var(--pur)}
+.scroll{overflow-x:auto}
+table.hm{border-collapse:separate;border-spacing:3px;font-size:13px;min-width:640px;width:100%}
+table.hm th{color:var(--dim);font-weight:400;padding:2px 4px}
+table.hm td{text-align:center;padding:9px 4px;border-radius:3px}
+table.hm td.nm{text-align:left;color:var(--text);white-space:nowrap;background:none;padding-right:10px}
+details{border:1px solid var(--line);border-radius:6px;background:var(--panel);margin:8px 0}
+summary{cursor:pointer;padding:10px 14px;list-style:none}
+summary::before{content:"?> ";color:var(--grn)}
+details[open] summary{color:var(--cyan)}
+details p{padding:0 14px 12px;color:var(--dim)}
+.nav{display:flex;align-items:center;gap:14px;padding:10px clamp(14px,4vw,40px);border-top:1px solid var(--line);background:#081022}
+.nav button{font:inherit;color:var(--text);background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:6px 14px;cursor:pointer}
+.nav button:hover{border-color:var(--cyan)}
+button:focus-visible,summary:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+.dots{display:flex;gap:7px;flex:1;justify-content:center}
+.dots i{width:22px;height:4px;background:var(--line);border-radius:2px;cursor:pointer}
+.dots i.on{background:var(--cyan)}
+.cnt{color:var(--dim);font-size:13px;min-width:5ch;text-align:right}
+#tree{width:100%;max-width:640px;height:auto}
+#tree path{fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:0;animation:draw 2.2s ease-out both}
+@keyframes draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@media(prefers-reduced-motion:reduce){#tree path{animation:none}}
+</style>
+</head>
+<body>
+<div class="deck">
+<div class="stage" id="stage">
+
+<section class="slide on">
+  <svg id="tree" viewBox="0 0 600 250" role="img" aria-label="Dendrograma ilustrativo con tres ramas"></svg>
+  <h1>Clustering jerárquico y PCA</h1>
+  <p class="dim">Tema 26. Cómo segmentar 100 clientes de Amazon sin etiquetas previas, y qué tan lejos se puede confiar en el resultado.</p>
+  <div class="chips"><span class="chip"><b>100</b> clientes</span><span class="chip"><b>9</b> variables</span><span class="chip"><b>4</b> segmentos</span><span class="chip"><b>36 %</b> de varianza en 2D</span></div>
+</section>
+
+<section class="slide">
+  <h2><i>#</i>Cómo agrupa el clustering aglomerativo</h2>
+  <div class="grid">
+    <div class="code"><div class="bar"><b></b><b></b><b></b><span>ideas_clave.py</span></div><div class="body">
+      <p><span class="k">aglomerativo</span> <span class="c"># bottom-up</span><br>Cada cliente empieza solo. Se une el par más parecido, luego el siguiente, hasta quedar un solo grupo.</p><br>
+      <p><span class="k">distancia_euclidiana</span><br>Línea recta entre dos clientes en el espacio de 9 variables.</p><br>
+      <p><span class="k">ward</span> <span class="c"># criterio de enlace</span><br>Une los grupos cuya fusión <span class="g">aumenta menos la varianza interna</span>. Da grupos compactos.</p>
+    </div></div>
+    <div class="code"><div class="bar"><b></b><b></b><b></b><span>leer_dendrograma.md</span></div><div class="body">
+      <p><span class="n">eje X</span>  clientes (las hojas)</p><br>
+      <p><span class="n">eje Y</span>  altura de fusión: más alto = grupos más distintos entre sí</p><br>
+      <p><span class="n">corte</span>  una línea horizontal cruza tantas ramas como clústeres quieras</p><br>
+      <p><span class="n">regla</span>  busca un salto grande entre una fusión y la siguiente</p>
+    </div></div>
+  </div>
+</section>
+
+<section class="slide">
+  <h2><i>#</i>Estandarizar antes de medir distancias</h2>
+  <div class="grid">
+    <div class="code"><div class="bar"><b></b><b></b><b></b><span>desv_est_original</span></div><div class="body" id="stds"></div></div>
+    <div>
+      <p class="dim"># experimento: agrupar con y sin StandardScaler</p>
+      <div class="big">ARI 0.14</div>
+      <p style="margin-top:12px">Sin estandarizar salen segmentos casi sin relación con los correctos (1.0 = idénticos, 0 = azar). Durabilidad y Tamaño de paquete dominan la distancia; Servicio de retorno casi no influye.</p><br>
+      <div class="code"><div class="body"><span class="k">z</span> = (x − media) / desv_est<br><span class="c"># cada variable queda con media 0 y desv. 1</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="slide">
+  <h2><i>#</i>¿Cuántos clústeres? k = 4 es una decisión</h2>
+  <div class="grid">
+    <div class="code"><div class="bar"><b></b><b></b><b></b><span>salto_dendrograma_por_k</span></div><div class="body" id="saltos"></div></div>
+    <div>
+      <p><span class="n">silueta ≈ 0.11</span> para cualquier k. Con menos de 0.25 la estructura es débil: los grupos se traslapan.</p><br>
+      <p>El mayor salto está en <span class="n">k = 3</span>. Elegimos <span class="k">k = 4</span> porque el corte (altura 9.56) es estable, su silueta iguala a k = 3, los grupos son manejables (21, 24, 36 y 19 clientes) y sus perfiles se pueden interpretar.</p><br>
+      <p class="dim"># ningún k es "matemáticamente óptimo": combina métricas y utilidad de negocio.</p>
+    </div>
+  </div>
+</section>
+
+<section class="slide">
+  <h2><i>#</i>Perfil de cada segmento</h2>
+  <p class="dim">Promedio estandarizado por clúster. Cian = por encima del promedio de todos los clientes, morado = por debajo.</p>
+  <div class="scroll code"><div class="body"><table class="hm" id="hm"></table></div></div>
+  <p class="dim"># las etiquetas son una lectura sugerida; los números de clúster son arbitrarios y pueden cambiar.</p>
+</section>
+
+<section class="slide">
+  <h2><i>#</i>PCA: un lente 2D, no el análisis</h2>
+  <div class="grid">
+    <div class="code"><div class="bar"><b></b><b></b><b></b><span>varianza_acumulada_%</span></div><div class="body" id="pca"></div></div>
+    <div>
+      <p>PC1 + PC2 explican <span class="n">36.1 %</span>. El otro 63.9 % no aparece en el gráfico. Hacen falta 7 componentes para llegar al 80 %.</p><br>
+      <p>El clustering se calcula con las <span class="k">9 variables</span>; el PCA solo sirve para dibujar. Grupos encimados en 2D no prueban que estén mezclados en 9D.</p><br>
+      <div class="code"><div class="bar"><b></b><b></b><b></b><span>cargas.py</span></div><div class="body">
+        <span class="n">PC1</span> Estrellas .51 · Velocidad .49 · V. educativo .49<br>
+        <span class="n">PC2</span> Paquete .52 · Precio .43 · Estrellas .43 · Durabilidad −.31<br>
+        <span class="c"># el signo de un eje es arbitrario</span>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<section class="slide">
+  <h2><i>#</i>Recomendar, con límites y repaso</h2>
+  <div class="grid">
+    <div>
+      <div class="code"><div class="bar"><b></b><b></b><b></b><span>silueta_por_cliente</span></div><div class="body" id="sil"></div></div><br>
+      <p>Los afines se eligen por <span class="g">distancia real</span> dentro del clúster, no por el orden del Excel. La base tiene evaluaciones, no compras: el siguiente paso es cruzar esos clientes con su historial.</p>
+    </div>
+    <div>
+      <details><summary>¿Por qué estandarizar?</summary><p>La distancia euclidiana sería dominada por las variables de mayor escala. Sin escalar, el ARI contra el resultado correcto es 0.14.</p></details>
+      <details><summary>¿k = 4 es el número óptimo?</summary><p>No. El mayor salto está en k = 3 y la silueta es plana. Es una decisión justificada, no un óptimo.</p></details>
+      <details><summary>¿Cuánta información muestra el gráfico 2D?</summary><p>36.1 % de la varianza. Es una vista parcial para explorar.</p></details>
+      <details><summary>¿Cómo se asigna un cliente nuevo?</summary><p>AgglomerativeClustering no tiene predict. Se estandariza con el scaler ya ajustado y se elige el segmento de centroide más cercano.</p></details>
+    </div>
+  </div>
+</section>
+
+</div>
+<div class="nav">
+  <button id="prev">Anterior</button>
+  <div class="dots" id="dots"></div>
+  <span class="cnt" id="cnt"></span>
+  <button id="next">Siguiente</button>
+</div>
+</div>
+
+<script>
+// Dendrograma ilustrativo (hero)
+(function(){
+  var svg=document.getElementById('tree'),NS='http://www.w3.org/2000/svg',Y=236;
+  function P(d,col){var p=document.createElementNS(NS,'path');p.setAttribute('d',d);p.setAttribute('pathLength','1');p.setAttribute('stroke',col);svg.appendChild(p)}
+  function M(a,b,h,col){P('M'+a.x+' '+a.y+'V'+h+'H'+b.x+'V'+b.y,col);return{x:(a.x+b.x)/2,y:h}}
+  function L(i){return{x:30+i*48,y:Y}}
+  var C=['#22d3ee','#a78bfa','#4ade80'],tops=[];
+  for(var g=0;g<3;g++){
+    var b=g*4,a1=M(L(b),L(b+1),190-g*10,C[g]),a2=M(L(b+2),L(b+3),200+g*6,C[g]);
+    tops.push(M(a1,a2,120+g*22,C[g]));
+  }
+  var t=M(tops[0],tops[1],70,'#8d9bc9');M(t,tops[2],24,'#8d9bc9');
+  var cut=document.createElementNS(NS,'path');cut.setAttribute('d','M8 100H592');cut.setAttribute('stroke','#dbe4ff');cut.setAttribute('stroke-width','1');cut.setAttribute('stroke-dasharray','5 6');cut.style.animation='none';cut.style.opacity='.55';svg.appendChild(cut);
+})();
+
+// Utilidades de barras
+function bars(id,items,max,fmt,cls){
+  document.getElementById(id).innerHTML=items.map(function(r){
+    return '<div class="row"><span>'+r[0]+'</span><div class="track"><div class="fill" style="width:'+(r[1]/max*100)+'%;background:'+(r[2]||'var(--cyan)')+'"></div></div><span>'+fmt(r[1])+'</span></div>';
+  }).join('');
+}
+bars('stds',[['Durabilidad',188.0],['Paquete',163.9],['Imagen',121.8],['Calidad',110.6],['Velocidad',95.0],['Precio',65.0],['Estrellas',11.7],['V. educativo',11.3],['Retorno',9.6]],190,function(v){return v.toFixed(0)});
+bars('saltos',[2,3,4,5,6,7,8].map(function(k,i){var s=[0.55,3.25,1.18,0.21,0.31,0.71,0.14][i];return['k = '+k,s,k==3?'var(--cyan)':k==4?'var(--pur)':'#3a4f94']}),3.3,function(v){return v.toFixed(2)});
+bars('pca',[19.4,36.1,48.6,60.5,71.2,80.0,88.3,95.5,100].map(function(v,i){return['PC1..'+(i+1),v,v>=79.9?'var(--grn)':'var(--cyan)']}),100,function(v){return v.toFixed(0)+' %'});
+bars('sil',[['Stephania',0.32,'var(--grn)'],['Lydia',0.12,'var(--pur)'],['Salome',0.08,'var(--pur)']],0.35,function(v){return v.toFixed(2)});
+
+// Heatmap de perfiles
+(function(){
+  var cols=['Veloc.','Precio','Durab.','Imagen','V. educ.','Retorno','Paquete','Calidad','Estrellas'];
+  var rows=[
+   ['0 · Educativos bien valorados (21)',[.24,-.18,-.39,-.48,.70,.32,-.03,-.54,.81]],
+   ['1 · Paquetes grandes, precio alto (24)',[-.43,.68,-.30,.21,-.31,.38,1.11,-.44,.03]],
+   ['2 · Baja valoración general (36)',[-.20,-.35,-.14,-.05,-.44,-.33,-.58,-.04,-.90]],
+   ['3 · Calidad y durabilidad (19)',[.66,0,1.08,.37,.46,-.21,-.27,1.23,.76]]];
+  var h='<tr><th></th>'+cols.map(function(c){return'<th>'+c+'</th>'}).join('')+'</tr>';
+  rows.forEach(function(r){
+    h+='<tr><td class="nm">'+r[0]+'</td>'+r[1].map(function(v){
+      var a=Math.min(1,Math.abs(v)/1.3)*.85,rgb=v>=0?'34,211,238':'167,139,250';
+      return'<td style="background:rgba('+rgb+','+a.toFixed(2)+')">'+v.toFixed(2)+'</td>'}).join('')+'</tr>';
+  });
+  document.getElementById('hm').innerHTML=h;
+})();
+
+// Navegación
+var slides=[].slice.call(document.querySelectorAll('.slide')),cur=0,dots=document.getElementById('dots');
+slides.forEach(function(_,i){var d=document.createElement('i');d.onclick=function(){go(i)};dots.appendChild(d)});
+function go(n){
+  cur=Math.max(0,Math.min(slides.length-1,n));
+  slides.forEach(function(s,i){s.classList.toggle('on',i===cur)});
+  [].forEach.call(dots.children,function(d,i){d.classList.toggle('on',i===cur)});
+  document.getElementById('cnt').textContent=(cur+1)+' / '+slides.length;
+  slides[cur].scrollTop=0;
+  try{history.replaceState(null,'','#'+(cur+1))}catch(e){}
+}
+document.getElementById('prev').onclick=function(){go(cur-1)};
+document.getElementById('next').onclick=function(){go(cur+1)};
+document.addEventListener('keydown',function(e){
+  if(e.key==='ArrowRight'||e.key==='PageDown')go(cur+1);
+  if(e.key==='ArrowLeft'||e.key==='PageUp')go(cur-1);
+});
+go((parseInt(location.hash.slice(1),10)||1)-1);
+</script>
+</body>
+</html>
